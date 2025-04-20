@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /img/
+Sitemap: https://4993481327.ru/sitemap.xml
+
+# Настройки для Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+# Настройки для Yandex
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign
+Host: https://4993481327.ru
