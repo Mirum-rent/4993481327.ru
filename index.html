@@ -78,17 +78,31 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 15px 0;
+            padding: 10px 0;
         }
 
         .header-flex {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
         .logo img {
-            height: 50px;
+            height: 40px;
+        }
+
+        .logo-text {
+            font-size: 0.9rem;
+            color: var(--gray);
+            max-width: 200px;
         }
 
         /* Кнопки */
@@ -107,6 +121,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 0.9rem;
+            padding: 10px 20px;
         }
 
         .btn-whatsapp:hover {
@@ -125,14 +141,31 @@
             box-shadow: 0 5px 15px rgba(46, 134, 171, 0.4);
         }
 
+        .btn-secondary {
+            background: var(--secondary);
+            color: #FFFFFF;
+        }
+
+        .btn-secondary:hover {
+            background: #D97F01;
+        }
+
         /* Баннер */
         .hero {
-            padding: 60px 0;
+            padding: 40px 0;
             background: linear-gradient(135deg, #F5F7FA 0%, #E4E8EB 100%);
         }
 
+        .hero-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+        }
+
         .hero-content {
-            max-width: 600px;
+            flex: 1;
+            min-width: 300px;
         }
 
         .hero h1 span {
@@ -140,8 +173,11 @@
         }
 
         .hero-img {
+            flex: 1;
+            min-width: 300px;
             box-shadow: var(--shadow);
             max-height: 400px;
+            object-fit: cover;
         }
 
         /* Услуги */
@@ -193,6 +229,190 @@
             text-decoration: none;
             display: inline-block;
             margin-top: 15px;
+        }
+
+        /* Как начать работать */
+        .how-to-start {
+            padding: 60px 0;
+            background: #FFFFFF;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            z-index: 2;
+        }
+
+        .step-header {
+            padding: 30px 20px 20px;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            font-size: 1.2em;
+            text-align: center;
+            position: relative;
+            min-height: 80px;
+        }
+
+        .step-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-text {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .step-action {
+            margin-top: auto;
+            text-align: center;
+        }
+
+        /* Преимущества */
+        .advantages {
+            padding: 60px 0;
+            background: var(--light);
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .advantage-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .advantage-header {
+            padding: 20px;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            font-size: 1.2em;
+            text-align: center;
+            position: relative;
+        }
+
+        .advantage-header i {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .advantage-card:hover .advantage-header i {
+            transform: scale(1.2);
+        }
+
+        .advantage-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .advantage-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .advantage-text {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .advantage-stats {
+            margin-top: auto;
+            font-size: 0.9em;
+            color: var(--secondary);
+            font-weight: 500;
+            text-align: center;
+            padding-top: 15px;
+            border-top: 1px dashed #eee;
+        }
+
+        /* О компании */
+        .about {
+            padding: 60px 0;
+            background: #FFFFFF;
+        }
+
+        .about-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Цены */
@@ -303,6 +523,23 @@
             color: var(--secondary);
         }
 
+        .main-site-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 1px solid var(--secondary);
+            border-radius: 50px;
+            color: var(--secondary);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .main-site-link:hover {
+            background: var(--secondary);
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
         /* Анимации */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -313,7 +550,17 @@
         @media (max-width: 768px) {
             .header-flex {
                 flex-direction: column;
-                gap: 15px;
+                align-items: center;
+                text-align: center;
+            }
+
+            .logo {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-text {
+                max-width: 100%;
             }
 
             .hero {
@@ -332,6 +579,10 @@
                 padding: 10px;
                 font-size: 14px;
             }
+
+            .steps-container, .advantages-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -342,6 +593,7 @@
             <div class="header-flex">
                 <a href="https://arenda-kovrov-mirum.ru/" class="logo">
                     <img src="img/logo.png" alt="ООО МИРУМ">
+                    <div class="logo-text">Аренда грязезащитных ковров с заменой по Москве и области</div>
                 </a>
                 <a href="https://wa.me/79770005127" class="btn btn-whatsapp">
                     <i class="fab fa-whatsapp"></i> Написать в WhatsApp
@@ -353,12 +605,15 @@
     <!-- Баннер -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Аренда грязезащитных ковров <span>с бесплатной заменой</span></h1>
-                <p>Для стоматологий, магазинов, офисов и медицинских центров в Москве и Московской области</p>
-                <a href="#prices" class="btn btn-primary">Выбрать размер</a>
+            <div class="hero-flex">
+                <div class="hero-content">
+                    <h1>Аренда грязезащитных ковров <span>с бесплатной заменой</span></h1>
+                    <p>Для стоматологий, магазинов, офисов и медицинских центров в Москве и Московской области</p>
+                    <a href="#prices" class="btn btn-primary">Выбрать размер</a>
+                    <a href="https://arenda-kovrov-mirum.ru/" class="main-site-link">Посмотреть другие регионы</a>
+                </div>
+                <img src="img/main-banner.png" alt="Грязезащитные ковры" class="hero-img">
             </div>
-            <img src="img/main-banner.png" alt="Грязезащитные ковры" class="hero-img">
         </div>
     </section>
 
@@ -393,6 +648,119 @@
                     <h3>150×250 см</h3>
                     <p>Для зон с высокой проходимостью</p>
                     <a href="#prices" class="btn-card">Смотреть цены</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как начать работать -->
+    <section class="how-to-start">
+        <div class="container">
+            <h2>Как начать с нами работать</h2>
+            <div class="steps-container">
+                <!-- Шаг 1 -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-header">Оставить заявку</div>
+                    <div class="step-content">
+                        <p class="step-text">Напишите нам в WhatsApp и сообщите:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 20px;">
+                            <li>Город и адрес объекта</li>
+                            <li>Необходимое количество ковров</li>
+                            <li>Желаемые размеры</li>
+                            <li>Частоту замены</li>
+                        </ul>
+                        <div class="step-action">
+                            <a href="https://wa.me/79770005127" class="btn btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Шаг 2 -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-header">Заключить договор</div>
+                    <div class="step-content">
+                        <p class="step-text">Вышлите нам реквизиты вашей организации. Мы подготовим договор и отправим его вам на согласование.</p>
+                        <p class="step-text">Для начала работы достаточно скан-копии или фотографии подписанного с вашей стороны договора.</p>
+                    </div>
+                </div>
+                
+                <!-- Шаг 3 -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-header">Согласовать детали</div>
+                    <div class="step-content">
+                        <p class="step-text">Согласуем график замены ковров с учетом режима работы вашего объекта.</p>
+                        <p class="step-text">Подскажите, как вас легче найти: вывески, название организации, контактное лицо и другие детали для удобного доступа.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="advantages">
+        <div class="container">
+            <h2>Наши преимущества</h2>
+            <div class="advantages-grid">
+                <!-- Преимущество 1 -->
+                <div class="advantage-card">
+                    <div class="advantage-header">
+                        <i class="fas fa-map-marked-alt"></i>
+                        Широкая география
+                    </div>
+                    <div class="advantage-content">
+                        <h3 class="advantage-title">Работаем более чем в 20 регионах</h3>
+                        <p class="advantage-text">Опыт с 2009 года позволяет нам предлагать лучшие решения для клиентов по всей России. Наши ковры защищают помещения от Москвы до Владивостока.</p>
+                        <div class="advantage-stats">Более 1 млн. м² ковров в аренде</div>
+                    </div>
+                </div>
+                
+                <!-- Преимущество 2 -->
+                <div class="advantage-card">
+                    <div class="advantage-header">
+                        <i class="fas fa-users"></i>
+                        Профессионализм
+                    </div>
+                    <div class="advantage-content">
+                        <h3 class="advantage-title">Команда экспертов</h3>
+                        <p class="advantage-text">Каждому клиенту назначается персональный менеджер, который оперативно решает все вопросы и сопровождает на всех этапах сотрудничества.</p>
+                        <div class="advantage-stats">Оперативная поддержка</div>
+                    </div>
+                </div>
+                
+                <!-- Преимущество 3 -->
+                <div class="advantage-card">
+                    <div class="advantage-header">
+                        <i class="fas fa-file-contract"></i>
+                        Документооборот
+                    </div>
+                    <div class="advantage-content">
+                        <h3 class="advantage-title">Идеальная документация</h3>
+                        <p class="advantage-text">Работаем с электронным документооборотом (ЭДО). Все акты, счета и отчетные документы оформляются правильно и отправляются вовремя.</p>
+                        <div class="advantage-stats">100% соответствие требованиям</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О компании -->
+    <section class="about">
+        <div class="container">
+            <h2>О компании МИРУМ</h2>
+            <div class="about-flex">
+                <div class="about-content">
+                    <p>Мы работаем на рынке аренды грязезащитных ковров с 2009 года и обслуживаем клиентов по всей России.</p>
+                    <p>Наш сервис включает в себя не только поставку ковров, но и их регулярную замену, стирку и хранение. Это позволяет нашим клиентам сосредоточиться на своем бизнесе, не отвлекаясь на вопросы чистоты помещений.</p>
+                    <p>Помимо Москвы и Московской области, мы работаем в Санкт-Петербурге, Уфе, Казани, Астрахани, Сургуте, Новосибирске, Тюмени, Екатеринбурге, Челябинске, Перми и других городах.</p>
+                    <a href="https://arenda-kovrov-mirum.ru/" class="btn btn-secondary">Узнать больше на нашем сайте</a>
+                </div>
+                <div class="about-img">
+                    <img src="img/objects/Arenda_grjazezaschitnych_kovrov_balashiha.png" alt="Наши ковры в Балашихе">
                 </div>
             </div>
         </div>
@@ -513,6 +881,9 @@
                     <img src="img/review/otzyv_diana.png" alt="Отзыв ООО Диана">
                 </div>
                 <div class="review">
+                    <img src="img/review/otzyv_hertz_richmond.png" alt="Отзыв АО «Ричмонд Транспортные Услуги»">
+                </div>
+                <div class="review">
                     <img src="img/review/otzyv_okey.png" alt="Отзыв ООО Окей">
                 </div>
                 <div class="review">
@@ -533,6 +904,7 @@
                     <h3>Контакты</h3>
                     <p><i class="fas fa-phone-alt"></i> <a href="tel:+79770005127">+7 (977) 000-51-27</a></p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:matservice@yandex.ru">matservice@yandex.ru</a></p>
+                    <a href="https://arenda-kovrov-mirum.ru/" class="main-site-link">Наш основной сайт</a>
                 </div>
                 <div class="footer-requisites">
                     <h3>Реквизиты</h3>
@@ -548,7 +920,7 @@
         // Анимация появления элементов при скролле
         document.addEventListener('DOMContentLoaded', function() {
             const animateElements = () => {
-                const elements = document.querySelectorAll('.service-card, .review');
+                const elements = document.querySelectorAll('.service-card, .review, .step-card, .advantage-card');
                 elements.forEach(el => {
                     const elTop = el.getBoundingClientRect().top;
                     const windowHeight = window.innerHeight;
@@ -560,7 +932,7 @@
             };
 
             // Инициализация анимаций
-            document.querySelectorAll('.service-card, .review').forEach(el => {
+            document.querySelectorAll('.service-card, .review, .step-card, .advantage-card').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(20px)';
                 el.style.transition = 'all 0.6s ease';
