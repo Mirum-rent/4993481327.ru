@@ -3,122 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аренда грязезащитных ковров в Москве и области | ООО «МИРУМ»</title>
-    <meta name="description" content="Аренда грязезащитных ковров с заменой в Москве и Московской области. Размеры 85×150, 115×200, 150×250 см. Для клиник, магазинов, офисов.">
-    <meta name="keywords" content="аренда ковров, грязезащитные ковры, Москва, Московская область, ковры с заменой, стоматологии, магазины">
-    <meta name="geo.region" content="RU-MOS">
-    <link rel="icon" href="img/favicon.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Аренда грязезащитных ковров в Москве | ООО «МИРУМ»</title>
+    <meta name="description" content="Профессиональная аренда ковров с заменой. Для клиник, магазинов, офисов. Доставка по Москве и области.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png">
 </head>
 <body>
+    <!-- Шапка с лого и кнопкой -->
     <header class="header">
         <div class="container">
-            <div class="header__inner">
+            <div class="header-flex">
                 <a href="https://arenda-kovrov-mirum.ru/" class="logo">
-                    <img src="img/logo.png" alt="Логотип ООО МИРУМ">
+                    <img src="img/logo.png" alt="МИРУМ">
                 </a>
-                <a href="https://wa.me/79770005127" class="whatsapp-btn">
-                    <span>Написать в WhatsApp</span>
+                <a href="https://wa.me/79770005127" class="btn-whatsapp pulse">
+                    <i class="fab fa-whatsapp"></i> Написать в WhatsApp
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="banner">
+    <!-- Главный баннер -->
+    <section class="hero">
         <div class="container">
-            <div class="banner__content">
-                <h1>Аренда грязезащитных ковров в Москве и области</h1>
-                <p>С заменой 1 раз в неделю или 2 недели. Для клиник, магазинов, офисов.</p>
-                <a href="#prices" class="btn">Узнать цены</a>
+            <div class="hero-content">
+                <h1>Аренда грязезащитных ковров <span>с бесплатной заменой</span></h1>
+                <p>Для клиник, магазинов и офисов в Москве и области</p>
+                <a href="#prices" class="btn-primary">Выбрать размер</a>
             </div>
-            <img src="img/main-banner.png" alt="Грязезащитные ковры" class="banner__img">
+            <img src="img/main-banner.png" alt="Ковры" class="hero-img">
         </div>
     </section>
 
+    <!-- Услуги -->
     <section class="services">
         <div class="container">
-            <h2>Наши услуги</h2>
-            <div class="services__grid">
+            <h2>Популярные размеры</h2>
+            <div class="services-grid">
+                <!-- Карточка 1 -->
                 <div class="service-card">
-                    <img src="img/objects/Arenda_grjazezaschitnych_kovrov.png" alt="Ковер 85×150 см">
-                    <h3>Ковер 85×150 см</h3>
+                    <div class="card-img">
+                        <img src="img/objects/Arenda_grjazezaschitnych_kovrov.png" alt="Ковер 85×150 см">
+                    </div>
+                    <h3>85×150 см</h3>
                     <p>Идеально для небольших помещений</p>
+                    <a href="#prices" class="btn-card">Цена</a>
                 </div>
+                <!-- Карточка 2 -->
                 <div class="service-card">
-                    <img src="img/objects/Arenda_grjazezaschitnych_kovrov_v_office.png" alt="Ковер 115×200 см">
-                    <h3>Ковер 115×200 см</h3>
-                    <p>Популярный размер для офисов</p>
+                    <div class="card-img">
+                        <img src="img/objects/Arenda_grjazezaschitnych_kovrov_v_office.png" alt="Ковер 115×200 см">
+                    </div>
+                    <h3>115×200 см</h3>
+                    <p>Стандарт для офисов и магазинов</p>
+                    <a href="#prices" class="btn-card">Цена</a>
                 </div>
+                <!-- Карточка 3 -->
                 <div class="service-card">
-                    <img src="img/objects/Arenda_grjazezaschitnych_kovrov_moskva.png" alt="Ковер 150×250 см">
-                    <h3>Ковер 150×250 см</h3>
-                    <p>Для больших проходимых зон</p>
+                    <div class="card-img">
+                        <img src="img/objects/Arenda_grjazezaschitnych_kovrov_moskva.png" alt="Ковер 150×250 см">
+                    </div>
+                    <h3>150×250 см</h3>
+                    <p>Для зон с высокой проходимостью</p>
+                    <a href="#prices" class="btn-card">Цена</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Цены -->
     <section id="prices" class="prices">
         <div class="container">
             <h2>Стоимость аренды</h2>
-            <div class="table-wrapper">
+            <div class="price-table-wrapper">
                 <table class="price-table">
+                    <!-- Заголовок таблицы -->
                     <thead>
                         <tr>
                             <th>Регион</th>
                             <th>Сезон</th>
-                            <th>Размер (см)</th>
-                            <th>Периодичность</th>
-                            <th>Стоимость за 4 недели</th>
+                            <th>Размер</th>
+                            <th>Замена</th>
+                            <th>Цена за месяц</th>
                         </tr>
                     </thead>
+                    <!-- Тело таблицы -->
                     <tbody>
                         <tr>
-                            <td rowspan="2">Москва</td>
-                            <td>Летний</td>
-                            <td>85×150</td>
-                            <td>1 раз в две недели</td>
-                            <td>840,00 ₽</td>
+                            <td rowspan="2" class="region">Москва</td>
+                            <td>Лето</td>
+                            <td>85×150 см</td>
+                            <td>2 раза в месяц</td>
+                            <td class="price">840 ₽</td>
                         </tr>
                         <tr>
-                            <td>Зимний</td>
-                            <td>85×150</td>
-                            <td>1 раз в неделю</td>
-                            <td>1 680,00 ₽</td>
+                            <td>Зима</td>
+                            <td>85×150 см</td>
+                            <td>4 раза в месяц</td>
+                            <td class="price">1 680 ₽</td>
                         </tr>
-                        <!-- Остальные строки таблицы из ТЗ -->
+                        <!-- Остальные строки -->
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
 
+    <!-- Отзывы -->
     <section class="reviews">
         <div class="container">
-            <h2>Отзывы клиентов</h2>
-            <div class="reviews__slider">
-                <div class="review-slide">
-                    <img src="img/review/otzyv_diana.png" alt="Отзыв ООО «Диана»">
+            <h2>Нам доверяют</h2>
+            <div class="reviews-slider">
+                <div class="review">
+                    <img src="img/review/otzyv_diana.png" alt="Отзыв ООО Диана">
                 </div>
-                <!-- Остальные отзывы -->
+                <div class="review">
+                    <img src="img/review/otzyv_okey.png" alt="Отзыв ООО Окей">
+                </div>
+                <!-- Другие отзывы -->
             </div>
         </div>
     </section>
 
+    <!-- Футер -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__contacts">
-                <h3>Контакты</h3>
-                <p>WhatsApp: <a href="https://wa.me/79770005127">+7 (977) 000-51-27</a></p>
-                <p>Email: <a href="mailto:matservice@yandex.ru">matservice@yandex.ru</a></p>
-            </div>
-            <div class="footer__requisites">
-                <h3>Реквизиты</h3>
-                <p>ООО «МИРУМ»</p>
-                <p>ИНН 3019008619, КПП 301901001</p>
+            <div class="footer-grid">
+                <div class="footer-contacts">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+79770005127">+7 (977) 000-51-27</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:matservice@yandex.ru">matservice@yandex.ru</a></p>
+                </div>
+                <div class="footer-requisites">
+                    <h3>Реквизиты</h3>
+                    <p>ООО «МИРУМ»</p>
+                    <p>ИНН 3019008619, КПП 301901001</p>
+                </div>
             </div>
         </div>
     </footer>
