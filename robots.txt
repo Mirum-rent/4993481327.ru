@@ -1,31 +1,16 @@
 User-agent: *
 Allow: /
-Disallow: /private/
-Disallow: /tmp/
 Disallow: /admin/
 Disallow: /wp-admin/
 Disallow: /search/
+
+# Блокировка дублей с основного сайта
 Disallow: /*?*
 Disallow: /*.pdf$
 Disallow: /*.docx$
 
-# Специальные настройки для Яндекс
-User-agent: Yandex
-Clean-param: ref /razmer-*
-Clean-param: utm_source /ceny/
-Clean-param: utm_campaign /o-kompanii/
-Crawl-delay: 1.5
+# Явное указание главного зеркала
 Host: https://4993481327.ru
 
-# Настройки для Google
-User-agent: Googlebot
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.jpg$
-Allow: /*.png$
-Allow: /*.webp$
-Crawl-delay: 0.7
-
-# Указываем путь к сочному sitemap
+# Sitemap только для этого домена
 Sitemap: https://4993481327.ru/sitemap.xml
-Sitemap: https://4993481327.ru/sitemap-images.xml
