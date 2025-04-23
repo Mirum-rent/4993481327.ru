@@ -1,21 +1,31 @@
 User-agent: *
 Allow: /
-Disallow: /img/
-Disallow: /prognoz_pogody/
-Disallow: /eto_interesno_o_grjaztzaschite/
-Disallow: /partytown/
-Sitemap: https://4993481327.ru/sitemap.xml
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /search/
+Disallow: /*?*
+Disallow: /*.pdf$
+Disallow: /*.docx$
+
+# Специальные настройки для Яндекс
+User-agent: Yandex
+Clean-param: ref /razmer-*
+Clean-param: utm_source /ceny/
+Clean-param: utm_campaign /o-kompanii/
+Crawl-delay: 1.5
+Host: https://4993481327.ru
 
 # Настройки для Google
 User-agent: Googlebot
-Allow: /
-Crawl-delay: 2
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+Crawl-delay: 0.7
 
-# Настройки для Yandex
-User-agent: Yandex
-Allow: /
-Disallow: /prognoz_pogody/
-Disallow: /eto_interesno_o_grjaztzaschite/
-Disallow: /partytown/
-Clean-param: utm_source&utm_medium&utm_campaign
-Host: https://4993481327.ru
+# Указываем путь к сочному sitemap
+Sitemap: https://4993481327.ru/sitemap.xml
+Sitemap: https://4993481327.ru/sitemap-images.xml

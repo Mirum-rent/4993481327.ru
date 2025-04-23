@@ -1,21 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://4993481327.ru/</loc>
-    <lastmod>2025-04-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://4993481327.ru/#prices</loc>
-    <lastmod>2025-04-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://arenda-kovrov-mirum.ru/</loc>
-    <lastmod>2025-04-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Главный URL с максимальным приоритетом -->
+    <url>
+        <loc>https://4993481327.ru/</loc>
+        <lastmod>2025-04-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://4993481327.ru/img/main-banner.png</image:loc>
+            <image:title>Аренда грязезащитных ковров в Москве</image:title>
+        </image:image>
+    </url>
+
+    <!-- Популярные размеры ковров -->
+    <url>
+        <loc>https://4993481327.ru/razmer-85x150/</loc>
+        <lastmod>2025-04-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://4993481327.ru/img/objects/Arenda_grjazezaschitnych_kovrov.png</image:loc>
+            <image:title>Ковер 85×150 см для клиник и магазинов</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://4993481327.ru/razmer-115x200/</loc>
+        <lastmod>2025-04-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://4993481327.ru/img/objects/Arenda_grjazezaschitnych_kovrov_v_office.png</image:loc>
+            <image:title>Стандартный ковер 115×200 см</image:title>
+        </image:image>
+    </url>
+
+    <!-- Услуги и информация -->
+    <url>
+        <loc>https://4993481327.ru/uslugi/</loc>
+        <lastmod>2025-04-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://4993481327.ru/ceny/</loc>
+        <lastmod>2025-04-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- О компании и контакты -->
+    <url>
+        <loc>https://4993481327.ru/o-kompanii/</loc>
+        <lastmod>2025-04-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://4993481327.ru/img/objects/Arenda_grjazezaschitnych_kovrov_balashiha.png</image:loc>
+            <image:title>ООО «МИРУМ» - аренда ковров с 2009 года</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://4993481327.ru/kontakty/</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
