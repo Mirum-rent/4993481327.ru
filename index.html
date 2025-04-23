@@ -3,558 +3,1563 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аренда грязезащитных ковров в Москве | ООО «МИРУМ»</title>
-    <link rel="icon" href="img/favicon.png" type="image/png">
-    <meta name="description" content="Специальное предложение по аренде ковров 85×150, 115×200, 115×400, 150×240 и 150×300 см с заменой. Только для Москвы и области.">
-    <link rel="canonical" href="https://arenda-kovrov-mirum.ru/moskva/" />
+    <title>Чистый пол - профессиональный уход за напольными покрытиями и аренда грязезащитных ковров</title>
+    <meta name="description" content="Профессиональный уход за напольными покрытиями и аренда грязезащитных ковров по всей России. Опыт с 2009 года, более 30 млн м² обработанных полов.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.jpg">
     <meta name="yandex-verification" content="4df82802527fb26c" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* ОБЩИЕ СТИЛИ ДЛЯ ВСЕГО САЙТА */
         :root {
-            --primary: #2E86AB;
-            --secondary: #F18F01;
-            --dark: #333333;
-            --light: #F8F9FA;
-            --gray: #6C757D;
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --primary-color: #ddeff9;
+            --secondary-color: #1fbdde;
+            --accent-color: #011995;
+            --light-color: #e4f0f3;
+            --dark-color: #2c3e50;
+            --text-color: #333;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         body {
-            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
             line-height: 1.6;
-            color: var(--dark);
-            background: #FFFFFF;
+            background-color: var(--light-color);
         }
+
         .container {
-            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 0;
+            padding: 0 20px;
         }
-        /* Шапка */
-        .header {
-            background: #FFFFFF;
-            box-shadow: var(--shadow);
-            position: sticky;
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: var(--accent-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 15px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-whatsapp i {
+            margin-right: 8px;
+        }
+
+        /* HEADER СТИЛИ */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
             top: 0;
             z-index: 1000;
-            padding: 15px 0;
         }
-        .header-flex {
+
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            padding: 15px 0;
         }
+
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
-            text-decoration: none;
         }
+
         .logo img {
-            height: 40px;
+            height: 50px;
+            margin-right: 10px;
         }
+
         .logo-text {
-            font-size: 0.9rem;
-            color: var(--gray);
-            max-width: 200px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-color);
         }
-        /* Кнопки */
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-decoration: none;
+
+        .contacts {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .contact-item i {
+            margin-right: 8px;
+            color: var(--secondary-color);
+        }
+
+        .phone {
             font-weight: 600;
-            transition: all 0.3s;
+            color: var(--accent-color);
         }
-        .btn-whatsapp {
-            background: #25D366;
-            color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-        .btn-primary {
-            background: var(--primary);
-            color: #FFFFFF;
-        }
-        /* Баннер */
+
+        /* HERO БАННЕР */
         .hero {
-            padding: 60px 0;
-            background: linear-gradient(135deg, #F5F7FA 0%, #E4E8EB 100%);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/objects/matservise_1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+            margin-top: 80px;
         }
-        .hero-flex {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 30px;
-        }
-        .hero-content {
-            flex: 1;
-            min-width: 300px;
-        }
+
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: var(--primary);
         }
-        .hero h1 span {
-            color: var(--secondary);
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
         }
-        .hero-img {
-            flex: 1;
-            min-width: 300px;
-            box-shadow: var(--shadow);
-            border-radius: 8px;
-            max-height: 400px;
-            object-fit: cover;
+
+        /* УСЛУГИ ПО УХОДУ ЗА ПОЛАМИ */
+        .floor-care {
+            background-color: white;
         }
-        /* Услуги */
-        .services {
-            padding: 60px 0;
-            background: var(--light);
-        }
-        h2 {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--primary);
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
+
         .service-card {
-            background: #FFFFFF;
-            border-radius: 10px;
+            background-color: var(--primary-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .service-card ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .service-card li {
+            margin-bottom: 10px;
+        }
+
+        /* ГАЛЕРЕЯ ДО/ПОСЛЕ */
+        .gallery {
+            background-color: var(--light-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s;
-            opacity: 0;
-            animation: fadeIn 0.6s forwards;
-            animation-delay: calc(var(--order) * 0.2s);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 250px;
         }
-        @keyframes fadeIn {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .card-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        .card-img img {
+
+        .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform 0.3s ease;
         }
-        .service-card:hover .card-img img {
+
+        .gallery-item:hover img {
             transform: scale(1.05);
         }
-        .service-card h3 {
-            padding: 15px;
-            font-size: 1.3rem;
-            color: var(--primary);
-        }
-        .service-card p {
-            padding: 0 15px 15px;
-            color: var(--gray);
-        }
-        .btn-card {
-            display: block;
-            background: var(--secondary);
-            color: #FFFFFF;
+
+        .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
             padding: 10px;
-            margin: 15px;
-            border-radius: 50px;
             text-align: center;
+        }
+
+        /* ОТЗЫВЫ */
+        .testimonials {
+            background-color: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-header {
+            padding: 20px;
+            background-color: var(--accent-color);
+            color: white;
             font-weight: 600;
+            position: relative;
         }
-        /* Цены */
-        .prices {
-            padding: 60px 0;
+
+        .testimonial-header::after {
+            content: '📄';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2em;
         }
-        .price-table-wrapper {
-            overflow-x: auto;
-            margin-top: 30px;
+
+        .testimonial-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
-        .price-table {
+
+        .testimonial-preview {
+            margin-bottom: 15px;
+            height: 80px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .testimonial-preview::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+        }
+
+        .testimonial-full {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card:hover .testimonial-full {
+            max-height: 300px;
+        }
+
+        .testimonial-image-container {
             width: 100%;
-            border-collapse: collapse;
-            box-shadow: var(--shadow);
+            height: 150px;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            position: relative;
+            margin-top: auto;
         }
-        .price-table th, .price-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #DDDDDD;
+
+        .testimonial-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
         }
-        .price-table th {
-            background: var(--primary);
-            color: #FFFFFF;
-            font-weight: 600;
+
+        .testimonial-card:hover .testimonial-image {
+            transform: scale(1.03);
         }
-        .price-table tr:nth-child(even) {
-            background: #F8F9FA;
+
+        .testimonial-image-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
         }
-        .price-table tr:hover {
-            background: #E6F7FF;
+
+        .testimonial-date {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
         }
-        .price {
-            font-weight: 700;
-            color: var(--primary);
+
+        /* КОНТАКТЫ */
+        .contact-section {
+            background-color: var(--primary-color);
         }
-        /* Форма */
-        .order-form {
-            background: var(--light);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            margin-top: 40px;
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
+
+        .contact-info {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h3 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-item i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+            margin-top: 3px;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
         .form-group {
             margin-bottom: 20px;
         }
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            font-weight: 500;
+            font-weight: 600;
         }
-        .form-group input, .form-group select {
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 12px;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Montserrat', sans-serif;
+            border-radius: 4px;
+            font-size: 16px;
         }
-        .form-submit {
-            background: var(--secondary);
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--dark-color);
             color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        /* Футер */
-        .footer {
-            background: var(--dark);
-            color: #FFFFFF;
             padding: 40px 0;
+            text-align: center;
         }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        .footer h3 {
-            color: #FFFFFF;
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             margin-bottom: 20px;
         }
-        .footer a {
-            color: #FFFFFF;
+
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
             text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
         }
-        .footer a:hover {
-            text-decoration: underline;
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
         }
-        .footer i {
-            margin-right: 10px;
-            color: var(--secondary);
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.7);
         }
-        /* Адаптивность */
+
+        /* АДАПТИВНОСТЬ */
         @media (max-width: 768px) {
-            .header-flex {
+            .header-container {
                 flex-direction: column;
                 text-align: center;
             }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+
+            .contacts {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-item {
+                margin: 5px 0;
+            }
+
             .hero {
-                text-align: center;
+                padding: 150px 0 80px;
             }
-            .hero-img {
-                margin-top: 30px;
+
+            .hero h1 {
+                font-size: 2rem;
             }
-            .services-grid {
-                grid-template-columns: 1fr;
+
+            .hero p {
+                font-size: 1rem;
             }
-            .price-table th, .price-table td {
-                padding: 8px 10px;
-                font-size: 14px;
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Шапка -->
-    <header class="header">
-        <div class="container">
-            <div class="header-flex">
-                <a href="https://arenda-kovrov-mirum.ru/" class="logo">
-                    <img src="img/logo.png" alt="ООО МИРУМ">
-                    <div class="logo-text">Аренда грязезащитных ковров с заменой</div>
-                </a>
-                <a href="https://wa.me/79770005127" class="btn btn-whatsapp">
-                    <i class="fab fa-whatsapp"></i> Написать в WhatsApp
-                </a>
+    <!-- НАЧАЛО HEADER -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="img/Logo.jpg" alt="Логотип Чистый пол">
+                <div class="logo-text">Чистый пол</div>
+            </div>
+            <div class="contacts">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+79770005127" class="phone">+7 (977) 000-51-27</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:matservice@yandex.ru">matservice@yandex.ru</a>
+                </div>
             </div>
         </div>
     </header>
+    <!-- КОНЕЦ HEADER -->
 
-    <!-- Баннер -->
+    <!-- НАЧАЛО HERO БАННЕР -->
     <section class="hero">
         <div class="container">
-            <div class="hero-flex">
-                <div class="hero-content">
-                    <h1>Аренда грязезащитных ковров <span>в Москве</span></h1>
-                    <p>Специальное предложение для клиник, магазинов и офисов. Бесплатная замена по вашему графику!</p>
-                    <a href="#prices" class="btn btn-primary">Смотреть цены</a>
-                    <a href="https://arenda-kovrov-mirum.ru/" class="btn btn-secondary" style="margin-top: 15px;">
-                        Все регионы обслуживания
-                    </a>
-                </div>
-                <img src="img/main-banner.png" alt="Грязезащитные ковры" class="hero-img">
+            <h1>Профессиональный уход за напольными покрытиями</h1>
+            <p>Опыт с 2009 года. Более 30 миллионов квадратных метров успешно выполненных работ по всей России</p>
+            <a href="#calculator" class="btn">Рассчитать стоимость</a>
+            <a href="https://wa.me/79770005127" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Написать в WhatsApp</a>
+        </div>
+    </section>
+    <!-- КОНЕЦ HERO БАННЕР -->
+
+    <!-- НАЧАЛО РАЗДЕЛА О КОМПАНИИ -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">О компании "Чистый пол"</h2>
+            <div class="service-card">
+                <p>С 2009 года мы обеспечиваем безупречную чистоту и долговечность напольных покрытий по всей России. Наш опыт — это более 30 миллионов квадратных метров успешно выполненных работ в торговых центрах, офисах, медицинских учреждениях, складах и других объектах.</p>
+                <h3>Почему нам доверяют?</h3>
+                <ul>
+                    <li><strong>Опыт с 2009 года</strong> — мы знаем все нюансы ухода за разными типами покрытий</li>
+                    <li><strong>География работ — вся Россия</strong> — обеспечиваем качество в любом регионе</li>
+                    <li><strong>30 000 000+ м²</strong> обработанных полов — гарантия надежности и профессионализма</li>
+                    <li><strong>Современные технологии</strong> — используем лучшее оборудование и сертифицированные химические средства</li>
+                    <li><strong>Индивидуальный подход</strong> — подбираем решение под ваши задачи и бюджет</li>
+                </ul>
+                <p>Доверьте уход за вашими полами профессионалам — мы сохраним их безупречный вид на долгие годы!</p>
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ РАЗДЕЛА О КОМПАНИИ -->
 
-    <!-- Услуги -->
-    <section class="services">
+    <!-- НАЧАЛО РАЗДЕЛА УСЛУГИ ПО УХОДУ ЗА ПОЛАМИ -->
+    <section class="section floor-care">
         <div class="container">
-            <h2>Популярные размеры</h2>
-            <div class="services-grid">
-                <div class="service-card" style="--order: 1;">
-                    <div class="card-img">
-                        <img src="img/objects/Arenda_grjazezaschitnych_kovrikov.png" alt="Ковер 85×150 см">
-                    </div>
-                    <h3>85×150 см</h3>
-                    <p>Идеально для небольших помещений: кабинеты, магазины</p>
-                    <a href="#prices" class="btn-card">от 840 ₽/мес</a>
+            <h2 class="section-title">Уход за напольными покрытиями</h2>
+            
+            <div class="service-card">
+                <h3>Профессиональная обработка напольных покрытий</h3>
+                <p>Наши услуги по уходу за напольными покрытиями включают комплексный подход, который обеспечивает глубокую очистку, защиту и продление срока службы вашего пола. Мы работаем с различными типами покрытий, включая ПВХ, линолеум и другие эластичные материалы.</p>
+                
+                <h4>Этапы обработки:</h4>
+                <ol>
+                    <li><strong>Подготовка поверхности</strong>
+                        <ul>
+                            <li>Зонирование площади для поэтапной обработки</li>
+                            <li>Удаление мебели и крупного мусора</li>
+                            <li>Использование только чистого оборудования и инвентаря</li>
+                        </ul>
+                    </li>
+                    <li><strong>Глубокая очистка</strong>
+                        <ul>
+                            <li>Удаление старых защитных покрытий специальными стрипперами</li>
+                            <li>Обработка поверхности роторными машинами и ручными инструментами</li>
+                            <li>Тщательная промывка водой для удаления остатков химических средств</li>
+                        </ul>
+                    </li>
+                    <li><strong>Нанесение защитного покрытия</strong>
+                        <ul>
+                            <li>Применение качественных полиролей (глянцевых или матовых)</li>
+                            <li>Многослойное нанесение с соблюдением технологии</li>
+                            <li>Обеспечение равномерного покрытия без дефектов</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="service-card">
+                <h3>Проблема желтых пятен на ПВХ-покрытиях</h3>
+                <p>Многие владельцы напольных ПВХ-покрытий сталкиваются с появлением желтых пятен, которые невозможно удалить обычными средствами. Это естественный процесс, связанный с особенностями материала:</p>
+                <ul>
+                    <li>Пластификаторы в составе ПВХ мигрируют к поверхности</li>
+                    <li>Взаимодействие с резиновой пылью приводит к химическим реакциям</li>
+                    <li>Образующиеся соединения вызывают изменение цвета</li>
+                </ul>
+                
+                <p><strong>Важно понимать:</strong></p>
+                <ul>
+                    <li>Эти пятна не являются загрязнениями</li>
+                    <li>Их невозможно удалить обычными чистящими средствами</li>
+                    <li>Единственное радикальное решение - замена покрытия</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>Профилактика и уход</h3>
+                <p>Чтобы максимально отсрочить появление желтых пятен и сохранить привлекательный вид покрытия, мы рекомендуем:</p>
+                <ol>
+                    <li>Регулярную профессиональную обработку (2 раза в год для зон с высокой проходимостью)</li>
+                    <li>Своевременное обновление защитного полимерного слоя</li>
+                    <li>Использование специализированных средств ухода</li>
+                </ol>
+                <p>Наши специалисты подберут оптимальный режим ухода именно для вашего типа покрытия и условий эксплуатации.</p>
+                
+                <h4>Почему выбирают нас?</h4>
+                <ul>
+                    <li>Профессиональное оборудование и качественные материалы</li>
+                    <li>Отработанные технологии обработки</li>
+                    <li>Учет особенностей конкретного типа покрытия</li>
+                    <li>Прозрачные цены и гарантия на работы</li>
+                </ul>
+                <p>Закажите консультацию нашего специалиста, и мы поможем сохранить ваши полы в идеальном состоянии на долгие годы!</p>
+                <p><em>Цена в каждом отдельном случае рассматривается индивидуально. Мы работаем по всей стране.</em></p>
+            </div>
+        </div>
+    </section>
+    <!-- КОНЕЦ РАЗДЕЛА УСЛУГИ ПО УХОДУ ЗА ПОЛАМИ -->
+
+    <!-- НАЧАЛО РАЗДЕЛА АРЕНДА КОВРОВ -->
+    <section class="section" id="rent">
+        <div class="container">
+            <h2 class="section-title">Аренда грязезащитных ковров</h2>
+            <div class="service-card">
+                <p>Предлагаем услуги аренды профессиональных грязезащитных ковров для любых помещений. Наши ковры эффективно задерживают до 90% грязи и влаги, сохраняя чистоту ваших помещений.</p>
+                <p>Преимущества аренды наших ковров:</p>
+                <ul>
+                    <li>Регулярная замена и чистка ковров нашими специалистами</li>
+                    <li>Различные размеры и типы ковров под любые потребности</li>
+                    <li>Работаем по всей России с 2009 года</li>
+                    <li>Более 1 млн м² ковров в аренде</li>
+                    <li>Полное соответствие требованиям ФЗ 44 и ФЗ 223 для госзакупок</li>
+                </ul>
+                <p>Выберите удобный вариант аренды и рассчитайте стоимость прямо сейчас!</p>
+            </div>
+        </div>
+    </section>
+    <!-- КОНЕЦ РАЗДЕЛА АРЕНДА КОВРОВ -->
+
+    <!-- НАЧАЛО БЛОКА КАЛЬКУЛЯТОРА (ВСТАВЛЕН ИЗ ПРИЛОЖЕННОГО ФАЙЛА, АДАПТИРОВАН ПОД ЦВЕТОВУЮ ГАММУ) -->
+    <section id="calculator" class="section" style="background-color: var(--light-color);">
+        <div class="container">
+            <h2 class="section-title">Калькулятор стоимости</h2>
+            
+            <div class="calculator-section" style="background-color: var(--primary-color); border-radius: 8px; margin-bottom: 30px;">
+                <div class="calculator-tabs" style="display: flex; justify-content: center; margin-bottom: 30px; flex-wrap: wrap;">
+                    <button class="tab-btn active" data-tab="standard" style="padding: 10px 20px; background-color: var(--accent-color); color: white; border: none; cursor: pointer; font-size: 16px; transition: all 0.3s;">Стандартные ковры</button>
+                    <button class="tab-btn" data-tab="tender" style="padding: 10px 20px; background-color: #ddd; border: none; cursor: pointer; font-size: 16px; transition: all 0.3s;">Тендерный калькулятор</button>
                 </div>
-                <div class="service-card" style="--order: 2;">
-                    <div class="card-img">
-                        <img src="img/objects/Arenda_grjazezaschitnych_kovrov_moskva.png" alt="Ковер 115×200 см">
-                    </div>
-                    <h3>115×200 см</h3>
-                    <p>Стандартный размер для офисов и клиник</p>
-                    <a href="#prices" class="btn-card">от 1 520 ₽/мес</a>
+                
+                <!-- Калькулятор стандартных ковров -->
+                <div id="standard-calculator" style="display: block; background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    <form id="standard-form">
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label for="region" style="display: block; margin-bottom: 8px; font-weight: 600;">Регион</label>
+                            <select id="region" onchange="updateSizes()" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                <option value="">Выберите регион</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label for="size" style="display: block; margin-bottom: 8px; font-weight: 600;">Размер ковра</label>
+                            <select id="size" disabled onchange="updateFrequencies()" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                <option value="">Сначала выберите регион</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label for="frequency" style="display: block; margin-bottom: 8px; font-weight: 600;">Периодичность замены</label>
+                            <select id="frequency" disabled onchange="calculate()" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                <option value="">Сначала выберите размер</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label for="quantity" style="display: block; margin-bottom: 8px; font-weight: 600;">Количество ковров</label>
+                            <input type="number" id="quantity" min="1" value="1" onchange="calculate()" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                        </div>
+                        
+                        <button type="button" class="btn" onclick="addPosition()" style="display: inline-block; padding: 12px 24px; background-color: var(--accent-color); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; font-size: 16px; margin: 5px; width: calc(50% - 10px); box-sizing: border-box; text-align: center;">Добавить позицию</button>
+                        
+                        <div id="addedNotice" style="display: none; background-color: #e8f4fd; padding: 10px; border-radius: 4px; margin: 10px 0; text-align: center;">
+                            Позиция добавлена! Вы можете продолжить добавлять ковры для этого же региона или изменить параметры выше.
+                        </div>
+                        
+                        <div id="standard-result" style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; display: none;">
+                            <h3 style="margin-bottom: 15px; color: var(--accent-color);">Ваш заказ</h3>
+                            <table id="orderTable" style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                                <thead>
+                                    <tr>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd; background-color: var(--accent-color); color: white;">Размер</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd; background-color: var(--accent-color); color: white;">Кол-во</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd; background-color: var(--accent-color); color: white;">Замена</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd; background-color: var(--accent-color); color: white;">Цена за 1 замену</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd; background-color: var(--accent-color); color: white;">Стоимость за 4 недели</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="orderBody">
+                                    <!-- Здесь будут добавляться позиции -->
+                                </tbody>
+                            </table>
+                            
+                            <div id="total" style="font-weight: bold; background-color: var(--primary-color) !important; padding: 12px; margin-top: 15px;">Общая стоимость: 0 ₽</div>
+                            
+                            <div id="discountNotice" style="display: none; color: var(--accent-color); margin: 15px 0;">
+                                <p>Это предварительный расчет, напишите нам в WhatsApp, мы сделаем более выгодное предложение.</p>
+                            </div>
+                            
+                            <div id="discountSection" style="display: none;">
+                                <h3>Запросить скидку</h3>
+                                <div class="form-group" style="margin-bottom: 20px;">
+                                    <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600;">Ваше имя*</label>
+                                    <input type="text" id="name" placeholder="Иван Иванов" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 20px;">
+                                    <label for="discountPhone" style="display: block; margin-bottom: 8px; font-weight: 600;">Телефон*</label>
+                                    <input type="tel" id="discountPhone" placeholder="+7 (999) 123-45-67" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                </div>
+                                
+                                <div class="consent-toggle" style="display: flex; align-items: center; margin: 20px 0;">
+                                    <label class="toggle-switch" style="position: relative; display: inline-block; width: 60px; height: 34px; margin-right: 10px;">
+                                        <input type="checkbox" id="consent" required style="opacity: 0; width: 0; height: 0;">
+                                        <span class="toggle-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px;"></span>
+                                    </label>
+                                    <span class="toggle-label" style="font-weight: 400; cursor: pointer;">Я согласен на <a class="privacy-link" onclick="openPrivacyModal()" style="color: var(--secondary-color); text-decoration: underline; margin-left: 5px; cursor: pointer;">обработку персональных данных</a></span>
+                                </div>
+                                
+                                <button type="button" class="btn" onclick="requestDiscount()" style="display: inline-block; padding: 12px 24px; background-color: var(--accent-color); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; font-size: 16px; margin: 5px; width: calc(50% - 10px); box-sizing: border-box; text-align: center;">Отправить запрос</button>
+                            </div>
+                            
+                            <div style="margin-top: 30px; display: flex; flex-wrap: wrap;">
+                                <button type="button" class="btn btn-whatsapp" onclick="sendToWhatsApp()" style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; background-color: #25D366; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; font-size: 16px; margin: 5px; width: calc(50% - 10px); box-sizing: border-box; text-align: center;">
+                                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Написать в WhatsApp
+                                </button>
+                                <button type="button" class="btn btn-secondary" onclick="showContractForm()" style="display: inline-block; padding: 12px 24px; background-color: var(--secondary-color); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; font-size: 16px; margin: 5px; width: calc(50% - 10px); box-sizing: border-box; text-align: center;">Отправить реквизиты</button>
+                            </div>
+                            
+                            <div class="requisites-form" id="contractForm" style="display: none;">
+                                <h3>Реквизиты для договора</h3>
+                                <div class="form-row" style="display: flex; gap: 15px; margin-bottom: 15px;">
+                                    <div class="form-col" style="flex: 1;">
+                                        <div class="form-group" style="margin-bottom: 20px;">
+                                            <label for="company" style="display: block; margin-bottom: 8px; font-weight: 600;">Название организации</label>
+                                            <input type="text" id="company" placeholder="ООО 'Ромашка'" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                        </div>
+                                    </div>
+                                    <div class="form-col" style="flex: 1;">
+                                        <div class="form-group" style="margin-bottom: 20px;">
+                                            <label for="contact-person" style="display: block; margin-bottom: 8px; font-weight: 600;">Контактное лицо*</label>
+                                            <input type="text" id="contact-person" placeholder="Иванов Иван Иванович" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row" style="display: flex; gap: 15px; margin-bottom: 15px;">
+                                    <div class="form-col" style="flex: 1;">
+                                        <div class="form-group" style="margin-bottom: 20px;">
+                                            <label for="contractPhone" style="display: block; margin-bottom: 8px; font-weight: 600;">Телефон*</label>
+                                            <input type="tel" id="contractPhone" placeholder="+7 (999) 123-45-67" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                        </div>
+                                    </div>
+                                    <div class="form-col" style="flex: 1;">
+                                        <div class="form-group" style="margin-bottom: 20px;">
+                                            <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600;">Email</label>
+                                            <input type="email" id="email" placeholder="example@mail.ru" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group" style="margin-bottom: 20px;">
+                                    <label for="requisites" style="display: block; margin-bottom: 8px; font-weight: 600;">Реквизиты компании (ИНН, ОГРН, КПП, почтовый адрес):</label>
+                                    <textarea id="requisites" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; min-height: 100px; resize: vertical;"></textarea>
+                                </div>
+                                
+                                <div class="file-upload" style="margin: 15px 0;">
+                                    <label style="display: block; margin-bottom: 10px; font-weight: 600;">Или прикрепите реквизиты файлом</label>
+                                    <input type="file" id="requisitesFile" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                </div>
+                                
+                                <div class="consent-toggle" style="display: flex; align-items: center; margin: 20px 0;">
+                                    <label class="toggle-switch" style="position: relative; display: inline-block; width: 60px; height: 34px; margin-right: 10px;">
+                                        <input type="checkbox" id="contractConsent" required style="opacity: 0; width: 0; height: 0;">
+                                        <span class="toggle-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px;"></span>
+                                    </label>
+                                    <span class="toggle-label" style="font-weight: 400; cursor: pointer;">Я согласен на <a class="privacy-link" onclick="openPrivacyModal()" style="color: var(--secondary-color); text-decoration: underline; margin-left: 5px; cursor: pointer;">обработку персональных данных</a></span>
+                                </div>
+                                
+                                <button type="button" class="btn" onclick="sendContractDetails()" style="display: inline-block; padding: 12px 24px; background-color: var(--accent-color); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; font-size: 16px; margin: 5px; width: 100%; box-sizing: border-box; text-align: center;">Отправить реквизиты</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="service-card" style="--order: 3;">
-                    <div class="card-img">
-                        <img src="img/objects/Arenda_grjazezaschitnych_kovrov_serpukhov.png" alt="Ковер 150×240 см">
-                    </div>
-                    <h3>150×240 см</h3>
-                    <p>Для помещений с высокой проходимостью</p>
-                    <a href="#prices" class="btn-card">от 2 360 ₽/мес</a>
+                
+                <!-- Тендерный калькулятор -->
+                <div id="tender-calculator" style="display: none; background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    <form id="tender-form">
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label for="tenderRegion" style="display: block; margin-bottom: 8px; font-weight: 600;">Регион</label>
+                            <select id="tenderRegion" onchange="updateTenderSizes()" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                <option value="">Выберите регион</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label for="tenderSize" style="display: block; margin-bottom: 8px; font-weight: 600;">Размер ковра</label>
+                            <select id="tenderSize" disabled onchange="calculateTender()" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                <option value="">Сначала выберите регион</option>
+                            </select>
+                        </div>
+                        
+                        <button type="button" class="btn" onclick="addTenderPosition()" style="display: inline-block; padding: 12px 24px; background-color: var(--accent-color); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; font-size: 16px; margin: 5px; width: calc(50% - 10px); box-sizing: border-box; text-align: center;">Добавить позицию</button>
+                        
+                        <div class="month-inputs" id="monthInputs" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 15px; margin-top: 25px; overflow-x: auto; padding-bottom: 15px;">
+                            <!-- Месячные поля будут добавлены динамически -->
+                        </div>
+                        
+                        <div id="tender-result" style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; display: none;">
+                            <h3 style="margin-bottom: 15px; color: var(--accent-color);">Расчет по тендеру</h3>
+                            <table id="tenderTable" style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                                <thead>
+                                    <tr>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd; background-color: var(--accent-color); color: white;">Месяц</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd; background-color: var(--accent-color); color: white;">Размер</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd; background-color: var(--accent-color); color: white;">Кол-во ковров</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd; background-color: var(--accent-color); color: white;">Кол-во замен</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd; background-color: var(--accent-color); color: white;">Стоимость</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tenderBody">
+                                    <!-- Здесь будут добавляться позиции -->
+                                </tbody>
+                            </table>
+                            
+                            <div id="tenderTotal" style="font-weight: bold; background-color: var(--primary-color) !important; padding: 12px; margin-top: 15px;">Общая стоимость по контракту: 0 ₽</div>
+                            
+                            <div id="tenderDiscountNotice" style="display: none; color: var(--accent-color); margin: 15px 0;">
+                                <p>Это предварительный расчет, напишите нам в WhatsApp, мы сделаем более выгодное предложение.</p>
+                            </div>
+                            
+                            <div style="margin-top: 30px;">
+                                <div class="form-group" style="margin-bottom: 20px;">
+                                    <label for="tenderName" style="display: block; margin-bottom: 8px; font-weight: 600;">Ваше имя*</label>
+                                    <input type="text" id="tenderName" placeholder="Иван Иванов" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 20px;">
+                                    <label for="tenderPhone" style="display: block; margin-bottom: 8px; font-weight: 600;">Телефон*</label>
+                                    <input type="tel" id="tenderPhone" placeholder="+7 (999) 123-45-67" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                                </div>
+                                
+                                <div class="consent-toggle" style="display: flex; align-items: center; margin: 20px 0;">
+                                    <label class="toggle-switch" style="position: relative; display: inline-block; width: 60px; height: 34px; margin-right: 10px;">
+                                        <input type="checkbox" id="tenderConsent" required style="opacity: 0; width: 0; height: 0;">
+                                        <span class="toggle-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px;"></span>
+                                    </label>
+                                    <span class="toggle-label" style="font-weight: 400; cursor: pointer;">Я согласен на <a class="privacy-link" onclick="openPrivacyModal()" style="color: var(--secondary-color); text-decoration: underline; margin-left: 5px; cursor: pointer;">обработку персональных данных</a></span>
+                                </div>
+                                
+                                <button type="button" class="btn btn-whatsapp" onclick="sendTenderToWhatsApp()" style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; background-color: #25D366; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; font-size: 16px; margin: 5px; width: 100%; box-sizing: border-box; text-align: center;">
+                                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Отправить в WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ БЛОКА КАЛЬКУЛЯТОРА -->
 
-    <!-- Цены -->
-    <section id="prices" class="prices">
+    <!-- НАЧАЛО БЛОКА НАШИ ПРЕИМУЩЕСТВА (АДАПТИРОВАН ПОД ЦВЕТОВУЮ ГАММУ) -->
+    <section class="section" style="background-color: white;">
         <div class="container">
-            <h2>Стоимость аренды</h2>
-            <div class="price-table-wrapper">
-                <table class="price-table">
-                    <thead>
-                        <tr>
-                            <th>Размер</th>
-                            <th>Частота замены</th>
-                            <th>Цена в месяц</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="4">85×150 см</td>
-                            <td>1 раз в две недели</td>
-                            <td class="price">840 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>1 раз в неделю</td>
-                            <td class="price">1 680 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>2 раза в неделю</td>
-                            <td class="price">3 360 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>3 раза в неделю</td>
-                            <td class="price">5 040 ₽</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4">115×200 см</td>
-                            <td>1 раз в две недели</td>
-                            <td class="price">1 520 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>1 раз в неделю</td>
-                            <td class="price">3 040 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>2 раза в неделю</td>
-                            <td class="price">6 080 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>3 раза в неделю</td>
-                            <td class="price">9 120 ₽</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4">115×400 см</td>
-                            <td>1 раз в две недели</td>
-                            <td class="price">4 420 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>1 раз в неделю</td>
-                            <td class="price">8 840 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>2 раза в неделю</td>
-                            <td class="price">17 680 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>3 раза в неделю</td>
-                            <td class="price">26 520 ₽</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4">150×240 см</td>
-                            <td>1 раз в две недели</td>
-                            <td class="price">2 360 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>1 раз в неделю</td>
-                            <td class="price">4 720 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>2 раза в неделю</td>
-                            <td class="price">9 440 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>3 раза в неделю</td>
-                            <td class="price">14 160 ₽</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4">150×300 см</td>
-                            <td>1 раз в две недели</td>
-                            <td class="price">3 040 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>1 раз в неделю</td>
-                            <td class="price">6 080 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>2 раза в неделю</td>
-                            <td class="price">12 160 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>3 раза в неделю</td>
-                            <td class="price">18 240 ₽</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Форма заказа -->
-            <div class="order-form">
-                <h3 style="text-align: center; margin-bottom: 30px;">Оставить заявку</h3>
-                <form id="orderForm">
-                    <div class="form-group">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name" required>
+            <h1 class="section-title">Наши преимущества</h1>
+            
+            <div class="advantages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 30px;">
+                <!-- Преимущество 1 -->
+                <div class="advantage-card" style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
+                    <div class="advantage-header" style="padding: 20px; background-color: var(--accent-color); color: white; font-weight: 600; font-size: 1.2em; text-align: center; position: relative;">
+                        <i class="fas fa-map-marked-alt" style="font-size: 1.5em; margin-bottom: 10px; display: block; transition: transform 0.3s ease;"></i>
+                        Широкая география
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Телефон</label>
-                        <input type="tel" id="phone" required>
+                    <div class="advantage-content" style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="advantage-title" style="font-size: 1.2em; font-weight: 600; color: var(--accent-color); margin-bottom: 15px; text-align: center;">Работаем более чем в 20 регионах</h3>
+                        <p class="advantage-text" style="margin-bottom: 15px; line-height: 1.6;">Опыт с 2009 года позволяет нам предлагать лучшие решения для клиентов по всей России. Наши ковры защищают помещения от Москвы до Владивостока.</p>
+                        <div class="advantage-stats" style="margin-top: auto; font-size: 0.9em; color: var(--secondary-color); font-weight: 500; text-align: center; padding-top: 15px; border-top: 1px dashed #eee;">Более 1 млн. м² ковров в аренде</div>
                     </div>
-                    <div class="form-group">
-                        <label for="size">Размер ковра</label>
-                        <select id="size" required>
-                            <option value="">Выберите размер</option>
-                            <option value="85x150">85×150 см</option>
-                            <option value="115x200">115×200 см</option>
-                            <option value="115x400">115×400 см</option>
-                            <option value="150x240">150×240 см</option>
-                            <option value="150x300">150×300 см</option>
-                        </select>
+                </div>
+                
+                <!-- Преимущество 2 -->
+                <div class="advantage-card" style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
+                    <div class="advantage-header" style="padding: 20px; background-color: var(--accent-color); color: white; font-weight: 600; font-size: 1.2em; text-align: center; position: relative;">
+                        <i class="fas fa-users" style="font-size: 1.5em; margin-bottom: 10px; display: block; transition: transform 0.3s ease;"></i>
+                        Профессионализм
                     </div>
-                    <div class="form-group">
-                        <label for="frequency">Частота замены</label>
-                        <select id="frequency" required>
-                            <option value="">Выберите частоту</option>
-                            <option value="1/2">1 раз в 2 недели</option>
-                            <option value="1">1 раз в неделю</option>
-                            <option value="2">2 раза в неделю</option>
-                            <option value="3">3 раза в неделю</option>
-                        </select>
+                    <div class="advantage-content" style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="advantage-title" style="font-size: 1.2em; font-weight: 600; color: var(--accent-color); margin-bottom: 15px; text-align: center;">Команда экспертов</h3>
+                        <p class="advantage-text" style="margin-bottom: 15px; line-height: 1.6;">Каждому клиенту назначается персональный менеджер, который оперативно решает все вопросы и сопровождает на всех этапах сотрудничества.</p>
+                        <div class="advantage-stats" style="margin-top: auto; font-size: 0.9em; color: var(--secondary-color); font-weight: 500; text-align: center; padding-top: 15px; border-top: 1px dashed #eee;">Оперативная поддержка</div>
                     </div>
-                    <button type="submit" class="form-submit">Заказать ковры</button>
-                </form>
+                </div>
+                
+                <!-- Преимущество 3 -->
+                <div class="advantage-card" style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
+                    <div class="advantage-header" style="padding: 20px; background-color: var(--accent-color); color: white; font-weight: 600; font-size: 1.2em; text-align: center; position: relative;">
+                        <i class="fas fa-file-contract" style="font-size: 1.5em; margin-bottom: 10px; display: block; transition: transform 0.3s ease;"></i>
+                        Документооборот
+                    </div>
+                    <div class="advantage-content" style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="advantage-title" style="font-size: 1.2em; font-weight: 600; color: var(--accent-color); margin-bottom: 15px; text-align: center;">Идеальная документация</h3>
+                        <p class="advantage-text" style="margin-bottom: 15px; line-height: 1.6;">Работаем с электронным документооборотом (ЭДО). Все акты, счета и отчетные документы оформляются правильно и отправляются вовремя.</p>
+                        <div class="advantage-stats" style="margin-top: auto; font-size: 0.9em; color: var(--secondary-color); font-weight: 500; text-align: center; padding-top: 15px; border-top: 1px dashed #eee;">100% соответствие требованиям</div>
+                    </div>
+                </div>
+                
+                <!-- Преимущество 4 -->
+                <div class="advantage-card" style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
+                    <div class="advantage-header" style="padding: 20px; background-color: var(--accent-color); color: white; font-weight: 600; font-size: 1.2em; text-align: center; position: relative;">
+                        <i class="fas fa-landmark" style="font-size: 1.5em; margin-bottom: 10px; display: block; transition: transform 0.3s ease;"></i>
+                        Госзакупки
+                    </div>
+                    <div class="advantage-content" style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="advantage-title" style="font-size: 1.2em; font-weight: 600; color: var(--accent-color); margin-bottom: 15px; text-align: center;">Работа с госучреждениями</h3>
+                        <p class="advantage-text" style="margin-bottom: 15px; line-height: 1.6;">Полное соответствие требованиям ФЗ 44 и ФЗ 223. Готовим гарантии, коммерческие предложения, участвуем в тендерах и работаем по офертам.</p>
+                        <div class="advantage-stats" style="margin-top: auto; font-size: 0.9em; color: var(--secondary-color); font-weight: 500; text-align: center; padding-top: 15px; border-top: 1px dashed #eee;">Опыт госзакупок с 2012 года</div>
+                    </div>
+                </div>
+                
+                <!-- Преимущество 5 -->
+                <div class="advantage-card" style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
+                    <div class="advantage-header" style="padding: 20px; background-color: var(--accent-color); color: white; font-weight: 600; font-size: 1.2em; text-align: center; position: relative;">
+                        <i class="fas fa-credit-card" style="font-size: 1.5em; margin-bottom: 10px; display: block; transition: transform 0.3s ease;"></i>
+                        Оплата
+                    </div>
+                    <div class="advantage-content" style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="advantage-title" style="font-size: 1.2em; font-weight: 600; color: var(--accent-color); margin-bottom: 15px; text-align: center;">Удобные платежи</h3>
+                        <p class="advantage-text" style="margin-bottom: 15px; line-height: 1.6;">Оплата по счету или банковской картой с автоматической выдачей чеков. Чистая отчетность для бухгалтерии и прозрачные финансовые потоки.</p>
+                        <div class="advantage-stats" style="margin-top: auto; font-size: 0.9em; color: var(--secondary-color); font-weight: 500; text-align: center; padding-top: 15px; border-top: 1px dashed #eee;">Безналичный и онлайн-расчет</div>
+                    </div>
+                </div>
+                
+                <!-- Преимущество 6 -->
+                <div class="advantage-card" style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
+                    <div class="advantage-header" style="padding: 20px; background-color: var(--accent-color); color: white; font-weight: 600; font-size: 1.2em; text-align: center; position: relative;">
+                        <i class="fas fa-handshake" style="font-size: 1.5em; margin-bottom: 10px; display: block; transition: transform 0.3s ease;"></i>
+                        Индивидуальность
+                    </div>
+                    <div class="advantage-content" style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="advantage-title" style="font-size: 1.2em; font-weight: 600; color: var(--accent-color); margin-bottom: 15px; text-align: center;">Гибкие условия</h3>
+                        <p class="advantage-text" style="margin-bottom: 15px; line-height: 1.6;">Подбираем решения под ваш бюджет и требования. Разрабатываем индивидуальные программы сотрудничества для постоянных клиентов.</p>
+                        <div class="advantage-stats" style="margin-top: auto; font-size: 0.9em; color: var(--secondary-color); font-weight: 500; text-align: center; padding-top: 15px; border-top: 1px dashed #eee;">Персональный подход к каждому</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ БЛОКА НАШИ ПРЕИМУЩЕСТВА -->
 
-    <!-- Футер -->
-    <footer class="footer">
+    <!-- НАЧАЛО ГАЛЕРЕИ ДО/ПОСЛЕ -->
+    <section class="section gallery">
         <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h3>Контакты</h3>
-                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+79770005127">+7 (977) 000-51-27</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:matservice@yandex.ru">matservice@yandex.ru</a></p>
+            <h2 class="section-title">Наши работы: до и после</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/poly/Poly-collage_before1.jpg" alt="Напольное покрытие до обработки">
+                    <div class="gallery-label">До обработки</div>
                 </div>
-                <div>
-                    <h3>Реквизиты</h3>
-                    <p>ООО «МИРУМ»</p>
-                    <p>ИНН 3019008619, КПП 301901001</p>
+                <div class="gallery-item">
+                    <img src="img/poly/Poly_collage_after1.jpg" alt="Напольное покрытие после обработки">
+                    <div class="gallery-label">После обработки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/poly/Poly-collage_before2.jpg" alt="Напольное покрытие до обработки">
+                    <div class="gallery-label">До обработки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/poly/Poly_collage_after2.jpg" alt="Напольное покрытие после обработки">
+                    <div class="gallery-label">После обработки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/poly/Poly-collage_before3.jpg" alt="Напольное покрытие до обработки">
+                    <div class="gallery-label">До обработки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/poly/Poly_collage_after3.jpg" alt="Напольное покрытие после обработки">
+                    <div class="gallery-label">После обработки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/poly/Poy_before1.jpg" alt="Напольное покрытие до обработки">
+                    <div class="gallery-label">До обработки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/poly/Poly_after1.jpg" alt="Напольное покрытие после обработки">
+                    <div class="gallery-label">После обработки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/poly/Poy_before2.jpg" alt="Напольное покрытие до обработки">
+                    <div class="gallery-label">До обработки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/poly/Poly_after2.jpg" alt="Напольное покрытие после обработки">
+                    <div class="gallery-label">После обработки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/poly/Poy_before3.jpg" alt="Напольное покрытие до обработки">
+                    <div class="gallery-label">До обработки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/poly/Poly_after3.jpg" alt="Напольное покрытие после обработки">
+                    <div class="gallery-label">После обработки</div>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="https://arenda-kovrov-mirum.ru/" style="color: var(--secondary);">Основной сайт компании</a>
+        </div>
+    </section>
+    <!-- КОНЕЦ ГАЛЕРЕИ ДО/ПОСЛЕ -->
+
+    <!-- НАЧАЛО БЛОКА ОТЗЫВОВ (АДАПТИРОВАН ПОД ЦВЕТОВУЮ ГАММУ) -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">Рекомендательные письма наших клиентов</h2>
+            
+            <div class="testimonials-grid">
+                <!-- Письмо 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header" style="background-color: var(--accent-color);">ООО «ДИАНА»</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-preview">
+                            Обратились в компанию МИРУМ за услугой по аренде входных ковриков и были приятно удивлены скорости реагирования на запрос и доведения дела до подписания договора...
+                        </div>
+                        <div class="testimonial-full">
+                            <p>Рекомендательное письмо от ООО «ДИАНА»</p>
+                            <p>ООО «ДИАНА»<br>
+                            ИНН 7721286782<br>
+                            КПП 77210001<br>
+                            ОГРН 1157746188709<br>
+                            Адрес: г. Москва, Волжский Бульвар 5-1<br>
+                            Генеральный директор Абрамов Р.В.</p>
+                            
+                            <p>Обратились в компанию МИРУМ за услугой по аренде входных ковриков (матсервис) и были приятно удивлены скорости реагирования на запрос и доведения дела до подписания договора и начала работ. Сами работы также оказываются на высоком уровне. Хотим отметить профессионализм сотрудников, которые качественно исполняют возложенные на них обязанности, помогая тем самым поддерживать чистоту на наших объектах.</p>
+                            <p>Особенно хотим отметить работу начальника отдела коммуникации Виктора и гл. бухгалтера Александру, которые ответственно подходят к исполнению своих обязанностей, обеспечивая тем самым оперативное взаимодействие между нашими организациями.</p>
+                            <p>Хотелось бы порекомендовать компанию МИРУМ всем ее будущим Клиентам, и свою очередь надеемся на долгое сотрудничество, которое со временем будет только крепнуть.</p>
+                        </div>
+                        <div class="testimonial-image-container">
+                            <img src="https://259506.selcdn.ru/sites-static/site1036205/94a5a65a-aa4f-415e-ac89-f8a4edb7a864/94a5a65a-aa4f-415e-ac89-f8a4edb7a864-13306718.jpeg" alt="Рекомендательное письмо ООО ДИАНА" class="testimonial-image">
+                            <div class="testimonial-image-label">Оригинал письма</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Письмо 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header" style="background-color: var(--accent-color);">Программа «Триумф XXI века»</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-preview">
+                            Коллектив программы «Триумф XXI века» благодарит сотрудников за усердие и высокое качество оказанных услуг, а руководство за грамотную организацию работ на объекте...
+                        </div>
+                        <div class="testimonial-full">
+                            <p>Рекомендательное письмо от программы «Триумф XXI века»</p>
+                            <p>Руководитель программы «Триумф XXI века»<br>
+                            Народный артист России<br>
+                            Запашный Мстислав Мстиславович<br>
+                            г. Сочи, проспект Пушкина, 5<br>
+                            Тел.: (8622) 92-25-59<br>
+                            Факс: 9273-68</p>
+                            
+                            <p>Коллектив программы «Триумф XXI века», в лице Народного артиста России Запашного Мстислава Мстиславовича, благодарит сотрудников за усердие и высокое качество оказанных услуг, а руководство за грамотную организацию работ на объекте. Порадовала слаженная работа коллектива и сроки исполнения заказа, а также способность справляться со сложными задачами.</p>
+                            <p>Коллектив программы «Триумф XXI века», в лице Запашного Мстислава Мстиславовича, надеется на дальнейшее подобное сотрудничество и рекомендует всем будущим клиентам агентство «Мирум» в качестве надежного и профессионального партнёра.</p>
+                        </div>
+                        <div class="testimonial-image-container">
+                            <img src="https://259506.selcdn.ru/sites-static/site1036205/d3fbb4dc-40e9-4826-bfc0-874d289d98a7/d3fbb4dc-40e9-4826-bfc0-874d289d98a7-13306784.jpeg" alt="Рекомендательное письмо Триумф XXI века" class="testimonial-image">
+                            <div class="testimonial-image-label">Оригинал письма</div>
+                        </div>
+                        <p class="testimonial-date">24.11.2010 г.</p>
+                    </div>
+                </div>
+                
+                <!-- Письмо 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header" style="background-color: var(--accent-color);">ООО «Посуда-Центр сервис»</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-preview">
+                            ООО «МИРУМ» на протяжении нескольких лет показал себя с лучшей стороны в решении самых разнообразных задач, запросы обрабатываются вовремя и качественно...
+                        </div>
+                        <div class="testimonial-full">
+                            <p>ООО «МИРУМ» на протяжении нескольких лет -- с начала открытия объекта, когда компания взяла на себя обязательство по оказанию клининговых услуг и аренде сменных ковриков. За это время сотрудники МИРУМ показали себя с лучшей стороны в решении самых разнообразных задач, запросы обрабатываются вовремя и качественно. Недочеты устраняются быстро.</p>
+                            <p>Хочется отметить работу отдельных сотрудников, отвечающих за взаимодействие с нашей компанией. К выполнению своих обязанностей подходят ответственно и учитывают все наши просьбы и пожелания. За время нашей работы реализован уже не один проект, несмотря на тяжелые экономические условия. Нравится готовность идти навстречу и решать поставленные задачи быстро и эффективно.</p>
+                            <p>Нас удовлетворил результат совместной работы, и мы рекомендуем компанию ООО «МИРУМ» как ответственного партнера.</p>
+                        </div>
+                        <div class="testimonial-image-container">
+                            <img src="https://259506.selcdn.ru/sites-static/site1036205/346c4e3e-257d-4055-bc78-24a826027961/346c4e3e-257d-4055-bc78-24a826027961-13306720.jpeg" alt="Рекомендательное письмо Посуда-Центр сервис" class="testimonial-image">
+                            <div class="testimonial-image-label">Оригинал письма</div>
+                        </div>
+                        <p class="testimonial-date">21 мая 2018 г.</p>
+                    </div>
+                </div>
+                
+                <!-- Письмо 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header" style="background-color: var(--accent-color);">ООО ПКФ «Контакт»</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-preview">
+                            ООО ПКФ «Контакт» благодарит коллектив агентства «Мирум» за высокое качество выполненных услуг. Особенно хотелось бы отметить скорость и оперативность реагирования...
+                        </div>
+                        <div class="testimonial-full">
+                            <p>ООО ПКФ «Контакт» благодарит коллектив агентства «Мирум» за высокое качество выполненных услуг. Особенно хотелось бы отметить скорость и оперативность реагирования на изменяющиеся цели и задачи.</p>
+                            <p>Очень понравилось работать с агентством, так как они учитывают особенности работы на конкретном объекте и с конкретным заказчиком.</p>
+                            <p>Мы рекомендуем агентство «Мирум» всем потенциальным клиентам как надежного, исполнительного и профессионального партнера.</p>
+                        </div>
+                        <div class="testimonial-image-container">
+                            <img src="https://259506.selcdn.ru/sites-static/site1036205/9e4197b2-1049-4b23-b25e-48b66d9b89ed/9e4197b2-1049-4b23-b25e-48b66d9b89ed-13306724.jpeg" alt="Рекомендательное письмо ООО ПКФ Контакт" class="testimonial-image">
+                            <div class="testimonial-image-label">Оригинал письма</div>
+                        </div>
+                        <p class="testimonial-date">Технический директор Л.Г. Егоркина</p>
+                    </div>
+                </div>
+                
+                <!-- Письмо 5 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header" style="background-color: var(--accent-color);">Магазин «Остин»</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-preview">
+                            ООО «Мирум» является нашим постоянным поставщиком клининговых услуг. За время сотрудничества мы ни разу не были разочарованы в результате работы данной компании...
+                        </div>
+                        <div class="testimonial-full">
+                            <p>ООО «Мирум» является нашим постоянным поставщиком клининговых услуг. За время сотрудничества мы ни разу не были разочарованы в результате работы данной компании. Сотрудники ООО «Мирум» привыкли выполнять поставленные задачи с учетом потребностей Заказчика и в соответствии с профессиональными требованиями. Налаживанию тесных партнерских отношений между нашими компаниями также способствовала высокая культура общения руководителя ООО «Мирум».</p>
+                            <p>Я готова рекомендовать эту компанию как надежного поставщика и ответственного партнера.</p>
+                        </div>
+                        <div class="testimonial-image-container">
+                            <img src="https://259506.selcdn.ru/sites-static/site1036205/47ca4f82-b093-49aa-839e-e70cf3cc02ac/47ca4f82-b093-49aa-839e-e70cf3cc02ac-13306725.jpeg" alt="Рекомендательное письмо Магазин Остин" class="testimonial-image">
+                            <div class="testimonial-image-label">Оригинал письма</div>
+                        </div>
+                        <p class="testimonial-date">Директор магазина «Остин», ТЦ «Галактика» в г. Смоленск, ул. Ново-Московская 2/8<br>Забелина А.Г.</p>
+                    </div>
+                </div>
+                
+                <!-- Письмо 6 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header" style="background-color: var(--accent-color);">ООО «Кредитэкспресс»</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-preview">
+                            ООО «Кредитэкспресс» искренне благодарит коллектив агентства «Мирум» за профессиональную и оперативную организацию процесса по химической чистке ковролина...
+                        </div>
+                        <div class="testimonial-full">
+                            <p>ООО «Кредитэкспресс» искренне благодарит коллектив агентства «Мирум» за профессиональную и оперативную организацию процесса по химической чистке ковролина нашего офиса.</p>
+                            <p>Очень понравилось бережное и внимательное отношение ваших сотрудников к имуществу нашей компании, и то, как быстро и слаженно они работают. Все наши пожелания сразу находили отклик и получали воплощение на деле.</p>
+                            <p>Мы рекомендуем агентство «Мирум» всем потенциальным клиентам как надежного, исполнительного и профессионального партнера.</p>
+                        </div>
+                        <div class="testimonial-image-container">
+                            <img src="https://259506.selcdn.ru/sites-static/site1036205/779e41c2-1181-43b4-a964-40e953db48be/779e41c2-1181-43b4-a964-40e953db48be-13306726.jpeg" alt="Рекомендательное письмо ООО Кредитэкспресс" class="testimonial-image">
+                            <div class="testimonial-image-label">Оригинал письма</div>
+                        </div>
+                        <p class="testimonial-date">Начальник ИТ Бобров В.А.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- КОНЕЦ БЛОКА ОТЗЫВОВ -->
+
+    <!-- НАЧАЛО КОНТАКТНОЙ СЕКЦИИ -->
+    <section class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Контактная информация</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p><strong>Телефон:</strong></p>
+                            <a href="tel:+79770005127">+7 (977) 000-51-27</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p><strong>Email:</strong></p>
+                            <a href="mailto:matservice@yandex.ru">matservice@yandex.ru</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <p><strong>Основной сайт:</strong></p>
+                            <a href="https://arenda-kovrov-mirum.ru/" target="_blank">arenda-kovrov-mirum.ru</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p><strong>Регионы работы:</strong></p>
+                            <p>Вся Россия</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Оставьте заявку</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Ваше имя*</label>
+                            <input type="text" id="contactName" placeholder="Иван Иванов" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Телефон*</label>
+                            <input type="tel" id="contactPhone" placeholder="+7 (999) 123-45-67" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Сообщение</label>
+                            <textarea id="contactMessage" placeholder="Опишите вашу задачу"></textarea>
+                        </div>
+                        <div class="consent-toggle" style="display: flex; align-items: center; margin: 20px 0;">
+                            <label class="toggle-switch" style="position: relative; display: inline-block; width: 60px; height: 34px; margin-right: 10px;">
+                                <input type="checkbox" id="contactConsent" required style="opacity: 0; width: 0; height: 0;">
+                                <span class="toggle-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px;"></span>
+                            </label>
+                            <span class="toggle-label" style="font-weight: 400; cursor: pointer;">Я согласен на <a class="privacy-link" onclick="openPrivacyModal()" style="color: var(--secondary-color); text-decoration: underline; margin-left: 5px; cursor: pointer;">обработку персональных данных</a></span>
+                        </div>
+                        <button type="submit" class="btn">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- КОНЕЦ КОНТАКТНОЙ СЕКЦИИ -->
+
+    <!-- НАЧАЛО FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#calculator">Калькулятор стоимости</a>
+                <a href="#rent">Аренда ковров</a>
+                <a href="#contact">Контакты</a>
+                <a onclick="openPrivacyModal()" style="cursor: pointer;">Политика конфиденциальности</a>
+            </div>
+            <div class="logo" style="justify-content: center; margin-bottom: 20px;">
+                <img src="img/Logo.jpg" alt="Логотип Чистый пол" style="height: 40px; margin-right: 10px;">
+                <div class="logo-text">Чистый пол</div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Компания по комплексному уходу за напольным покрытием и аренде грязезащитных ковров «Чистый пол». Все права защищены.
             </div>
         </div>
     </footer>
+    <!-- КОНЕЦ FOOTER -->
 
+    <!-- НАЧАЛО СКРИПТОВ -->
     <script>
-        // Обработка формы
-        document.getElementById('orderForm').addEventListener('submit', function(e) {
+        // Данные по ценам для каждого региона и размера
+        const priceData = {
+            "Москва": {
+                "85*60": { "1 раз в две недели": 180, "1 раз в неделю": 180, "2 раза в неделю": 180, "3 раза в неделю": 180 },
+                "85*150": { "1 раз в две недели": 420, "1 раз в неделю": 420, "2 раза в неделю": 420, "3 раза в неделю": 420 },
+                "115*200": { "1 раз в две недели": 760, "1 раз в неделю": 760, "2 раза в неделю": 760, "3 раза в неделю": 760 },
+                "150*240": { "1 раз в две недели": 1180, "1 раз в неделю": 1180, "2 раза в неделю": 1180, "3 раза в неделю": 1180 },
+                "150*300": { "1 раз в две недели": 1520, "1 раз в неделю": 1520, "2 раза в неделю": 1520, "3 раза в неделю": 1520 }
+            },
+            "Московская область": {
+                "85*60": { "1 раз в две недели": 280, "1 раз в неделю": 280, "2 раза в неделю": 280, "3 раза в неделю": 280 },
+                "85*150": { "1 раз в две недели": 620, "1 раз в неделю": 620, "2 раза в неделю": 620, "3 раза в неделю": 620 },
+                "115*200": { "1 раз в две недели": 1110, "1 раз в неделю": 1110, "2 раза в неделю": 1110, "3 раза в неделю": 1110 },
+                "150*240": { "1 раз в две недели": 1730, "1 раз в неделю": 1730, "2 раза в неделю": 1730, "3 раза в неделю": 1730 },
+                "150*300": { "1 раз в две недели": 2160, "1 раз в неделю": 2160, "2 раза в неделю": 2160, "3 раза в неделю": 2160 }
+            },
+            "Санкт-Петербург": {
+                "85*60": { "1 раз в две недели": 830, "1 раз в неделю": 490, "2 раза в неделю": 420, "3 раза в неделю": 340 },
+                "85*150": { "1 раз в две недели": 1000, "1 раз в неделю": 660, "2 раза в неделю": 590, "3 раза в неделю": 510 },
+                "115*200": { "1 раз в две недели": 1330, "1 раз в неделю": 890, "2 раза в неделю": 840, "3 раза в неделю": 680 },
+                "115*240": { "1 раз в две недели": 1500, "1 раз в неделю": 1000, "2 раза в неделю": 840, "3 раза в неделю": 760 },
+                "115*400": { "1 раз в две недели": 2510, "1 раз в неделю": 1670, "2 раза в неделю": 1520, "3 раза в неделю": 1350 },
+                "150*250": { "1 раз в две недели": 2000, "1 раз в неделю": 1330, "2 раза в неделю": 1180, "3 раза в неделю": 1010 },
+                "150*300": { "1 раз в две недели": 2510, "1 раз в неделю": 1670, "2 раза в неделю": 1520, "3 раза в неделю": 1350 }
+            },
+            "Ленинградская область": {
+                "85*60": { "1 раз в две недели": 830, "1 раз в неделю": 490, "2 раза в неделю": 420, "3 раза в неделю": 340 },
+                "85*150": { "1 раз в две недели": 1000, "1 раз в неделю": 660, "2 раза в неделю": 590, "3 раза в неделю": 510 },
+                "115*200": { "1 раз в две недели": 1330, "1 раз в неделю": 890, "2 раза в неделю": 840, "3 раза в неделю": 680 },
+                "115*240": { "1 раз в две недели": 1500, "1 раз в неделю": 1000, "2 раза в неделю": 840, "3 раза в неделю": 760 },
+                "115*400": { "1 раз в две недели": 2510, "1 раз в неделю": 1670, "2 раза в неделю": 1520, "3 раза в неделю": 1350 },
+                "150*250": { "1 раз в две недели": 2000, "1 раз в неделю": 1330, "2 раза в неделю": 1180, "3 раза в неделю": 1010 },
+                "150*300": { "1 раз в две недели": 2510, "1 раз в неделю": 1670, "2 раза в неделю": 1520, "3 раза в неделю": 1350 }
+            },
+            "Астрахань": {
+                "85*150": { "1 раз в две недели": 560, "1 раз в неделю": 560, "2 раза в неделю": 560, "3 раза в неделю": 560 },
+                "115*200": { "1 раз в две недели": 600, "1 раз в неделю": 600, "2 раза в неделю": 600, "3 раза в неделю": 600 },
+                "150*250": { "1 раз в две недели": 720, "1 раз в неделю": 720, "2 раза в неделю": 720, "3 раза в неделю": 720 }
+            },
+            "Астраханская область": {
+                "85*150": { "1 раз в две недели": 960, "1 раз в неделю": 960, "2 раза в неделю": 960, "3 раза в неделю": 960 },
+                "115*200": { "1 раз в две недели": 1120, "1 раз в неделю": 1120, "2 раза в неделю": 1120, "3 раза в неделю": 1120 },
+                "150*250": { "1 раз в две недели": 1280, "1 раз в неделю": 1280, "2 раза в неделю": 1280, "3 раза в неделю": 1280 }
+            },
+            "Уфа": {
+                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
+                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
+                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
+                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
+                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
+            },
+            "Республика Башкортостан": {
+                "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
+                "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
+                "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
+                "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
+                "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
+            },
+            "Новосибирск": {
+                "85*150": { "1 раз в две недели": 800, "1 раз в неделю": 560, "2 раза в неделю": 530, "3 раза в неделю": 500 },
+                "115*200": { "1 раз в две недели": 1080, "1 раз в неделю": 800, "2 раза в неделю": 740, "3 раза в неделю": 710 },
+                "115*400": { "1 раз в две недели": 2000, "1 раз в неделю": 1480, "2 раза в неделю": 1270, "3 раза в неделю": 1240 },
+                "150*250": { "1 раз в две недели": 1550, "1 раз в неделю": 1160, "2 раза в неделю": 1110, "3 раза в неделю": 1060 },
+                "150*300": { "1 раз в две недели": 1920, "1 раз в неделю": 1440, "2 раза в неделю": 1200, "3 раза в неделю": 1120 }
+            },
+            "Новосибирская область": {
+                "85*150": { "1 раз в две недели": 1200, "1 раз в неделю": 840, "2 раза в неделю": 800, "3 раза в неделю": 600 },
+                "115*200": { "1 раз в две недели": 1610, "1 раз в неделю": 1200, "2 раза в неделю": 1110, "3 раза в неделю": 1080 },
+                "115*400": { "1 раз в две недели": 3000, "1 раз в неделю": 2220, "2 раза в неделю": 1900, "3 раза в неделю": 1680 },
+                "150*250": { "1 раз в две недели": 2320, "1 раз в неделю": 1730, "2 раза в неделю": 1660, "3 раза в неделю": 1600 },
+                "150*300": { "1 раз в две недели": 2880, "1 раз в неделю": 2160, "2 раза в неделю": 1800, "3 раза в неделю": 1720 }
+            },
+            "Сургут": {
+                "85*150": { "1 раз в неделю": 720, "2 раза в неделю": 680, "3 раза в неделю": 640 },
+                "115*180": { "1 раз в неделю": 1160, "2 раза в неделю": 1100, "3 раза в неделю": 1040 },
+                "115*200": { "1 раз в неделю": 1290, "2 раза в неделю": 1220, "3 раза в неделю": 1160 },
+                "115*240": { "1 раз в неделю": 1540, "2 раза в неделю": 1470, "3 раза в неделю": 1390 },
+                "115*400": { "1 раз в неделю": 2570, "2 раза в неделю": 2430, "3 раза в неделю": 2310 },
+                "150*250": { "1 раз в неделю": 2100, "2 раза в неделю": 1990, "3 раза в неделю": 1890 },
+                "150*300": { "1 раз в неделю": 2680, "2 раза в неделю": 2550, "3 раза в неделю": 2410 }
+            },
+            "ХМАО": {
+                "85*150": { "1 раз в неделю": 720, "2 раза в неделю": 680, "3 раза в неделю": 640 },
+                "115*180": { "1 раз в неделю": 1160, "2 раза в неделю": 1100, "3 раза в неделю": 1040 },
+                "115*200": { "1 раз в неделю": 1290, "2 раза в неделю": 1220, "3 раза в неделю": 1160 },
+                "115*240": { "1 раз в неделю": 1540, "2 раза в неделю": 1470, "3 раза в неделю": 1390 },
+                "115*400": { "1 раз в неделю": 2570, "2 раза в неделю": 2430, "3 раза в неделю": 2310 },
+                "150*250": { "1 раз в неделю": 2100, "2 раза в неделю": 1990, "3 раза в неделю": 1890 },
+                "150*300": { "1 раз в неделю": 2680, "2 раза в неделю": 2550, "3 раза в неделю": 2410 }
+            },
+            "Тюмень": {
+                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
+                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
+                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
+                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
+                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
+            },
+            "Тюменская область": {
+                "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
+                "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
+                "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
+                "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
+                "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
+            },
+            "Екатеринбург": {
+                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
+                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
+                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
+                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
+                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
+            },
+            "Свердловская область": {
+                "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
+                "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
+                "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
+                "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
+                "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
+            },
+            "Челябинск": {
+                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
+                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
+                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
+                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
+                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
+            },
+            "Челябинская область": {
+                "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
+                "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
+                "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
+                "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
+                "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
+            },
+            "Пермь": {
+                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
+                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
+                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
+                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
+                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
+            },
+            "Пермский край": {
+                "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
+                "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
+                "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
+                "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
+                "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
+            },
+            "Казань": {
+                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
+                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
+                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
+                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
+                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
+            },
+           "Республика Татарстан": {
+            "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
+            "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
+            "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
+            "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
+            "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
+        }
+    };
+<!-- НАЧАЛО СКРИПТОВ (ПРОДОЛЖЕНИЕ) -->
+<script>
+    // Функция для отправки формы контактов
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('contactName').value;
+        const phone = document.getElementById('contactPhone').value;
+        const message = document.getElementById('contactMessage').value;
+        const consent = document.getElementById('contactConsent').checked;
+        
+        if (!name || !phone || !consent) {
+            alert('Пожалуйста, заполните все обязательные поля и дайте согласие на обработку данных');
+            return;
+        }
+        
+        let whatsappMessage = `Новая заявка с сайта:\nИмя: ${name}\nТелефон: ${phone}`;
+        if (message) whatsappMessage += `\nСообщение: ${message}`;
+        
+        sendWhatsAppMessage(whatsappMessage);
+        
+        // Очистка формы после отправки
+        this.reset();
+        alert('Ваша заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+    });
+
+    // Инициализация табов калькулятора
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Удаляем активный класс у всех кнопок
+            tabBtns.forEach(b => {
+                b.style.backgroundColor = '#ddd';
+                b.style.color = '#333';
+            });
+            
+            // Добавляем активный класс текущей кнопке
+            this.style.backgroundColor = 'var(--accent-color)';
+            this.style.color = 'white';
+            
+            // Переключаем видимость калькуляторов
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById('standard-calculator').style.display = 'none';
+            document.getElementById('tender-calculator').style.display = 'none';
+            document.getElementById(tabId + '-calculator').style.display = 'block';
+        });
+    });
+
+    // Функция для плавного скролла к якорям
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            alert('Спасибо! Мы свяжемся с вами в течение 15 минут.');
-            this.reset();
-        });
-
-        // Анимация при скролле
-        document.addEventListener('DOMContentLoaded', function() {
-            const animateOnScroll = () => {
-                const elements = document.querySelectorAll('.service-card');
-                elements.forEach(el => {
-                    const rect = el.getBoundingClientRect();
-                    if (rect.top < window.innerHeight - 100) {
-                        el.style.opacity = '1';
-                        el.style.transform = 'translateY(0)';
-                    }
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
                 });
-            };
-
-            window.addEventListener('scroll', animateOnScroll);
-            animateOnScroll(); // Инициализация
+            }
         });
-    </script>
+    });
+
+    // Анимация при прокрутке
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.service-card, .advantage-card, .testimonial-card');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    // Запуск анимации при загрузке и прокрутке
+    window.addEventListener('load', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
+
+    // Инициализация всех элементов с анимацией
+    document.querySelectorAll('.service-card, .advantage-card, .testimonial-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+</script>
+<!-- КОНЕЦ СКРИПТОВ -->
+
+<!-- МОДАЛЬНОЕ ОКНО ДЛЯ ФОТОГРАФИЙ -->
+<div id="imageModal" class="modal" style="display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); overflow: auto;">
+    <span class="close" onclick="document.getElementById('imageModal').style.display='none'" style="position: absolute; top: 20px; right: 35px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+    <img class="modal-content" id="modalImage" style="display: block; margin: 80px auto; max-width: 90%; max-height: 80%;">
+    <div id="caption" style="margin: auto; display: block; width: 80%; max-width: 700px; text-align: center; color: #ccc; padding: 10px 0; height: 150px;"></div>
+</div>
+
+<script>
+    // Функционал для модального окна с фотографиями
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', function() {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const captionText = document.getElementById('caption');
+            
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.parentElement.querySelector('.gallery-label').textContent;
+        });
+    });
+
+    // Закрытие модального окна при клике вне изображения
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.style.display = "none";
+        }
+    });
+</script>
+
+<!-- YANDEX METRICA -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(49934813, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/49934813" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /YANDEX METRICA -->
 </body>
 </html>
