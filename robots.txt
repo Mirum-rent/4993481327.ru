@@ -1,16 +1,18 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /wp-admin/
-Disallow: /search/
+Disallow: /private/
+Disallow: /tmp/
 
-# Блокировка дублей с основного сайта
-Disallow: /*?*
-Disallow: /*.pdf$
-Disallow: /*.docx$
-
-# Явное указание главного зеркала
-Host: https://4993481327.ru
-
-# Sitemap только для этого домена
 Sitemap: https://4993481327.ru/sitemap.xml
+
+# Оптимизация для Яндекс и Google
+Host: https://4993481327.ru
+Clean-param: ref /
+Crawl-delay: 2
+
+# Особые правила для ChatGPT и других ботов
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /

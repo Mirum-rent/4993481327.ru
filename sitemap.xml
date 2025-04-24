@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Только УНИКАЛЬНЫЕ URL этой посадочной страницы -->
-    <url>
-        <loc>https://4993481327.ru/</loc>
-        <lastmod>2025-04-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <!-- Не включайте URL основного сайта (arenda-kovrov-mirum.ru)! -->
+  <!-- ОСНОВНЫЕ СТРАНИЦЫ -->
+  <url>
+    <loc>https://4993481327.ru/</loc>
+    <lastmod>2025-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://4993481327.ru/#calculator</loc>
+    <lastmod>2025-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://4993481327.ru/#rent</loc>
+    <lastmod>2025-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ГАЛЕРЕЯ И ОТЗЫВЫ -->
+  <url>
+    <loc>https://4993481327.ru/#gallery</loc>
+    <lastmod>2025-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://4993481327.ru/#testimonials</loc>
+    <lastmod>2025-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
