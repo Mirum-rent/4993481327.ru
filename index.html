@@ -1542,6 +1542,22 @@
             this.style.display = "none";
         }
     });
+// НАЧАЛО ИСПРАВЛЕНИЯ КАЛЬКУЛЯТОРА
+document.addEventListener('DOMContentLoaded', function() {
+    initRegionSelects(); // Инициализация регионов
+    initMonthInputs();   // Инициализация месяцев для тендера
+    
+    // Вешаем обработчики на табы калькулятора
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById('standard-calculator').style.display = 'none';
+            document.getElementById('tender-calculator').style.display = 'none';
+            document.getElementById(tabId + '-calculator').style.display = 'block';
+        });
+    });
+});
+// КОНЕЦ ИСПРАВЛЕНИЯ
 </script>
 
 <!-- YANDEX METRICA -->
