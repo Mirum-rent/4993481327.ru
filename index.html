@@ -1260,233 +1260,365 @@
     <!-- КОНЕЦ FOOTER -->
 
     <!-- НАЧАЛО СКРИПТОВ -->
-    <script>
-        // Данные по ценам для каждого региона и размера
-        const priceData = {
-            "Москва": {
-                "85*60": { "1 раз в две недели": 180, "1 раз в неделю": 180, "2 раза в неделю": 180, "3 раза в неделю": 180 },
-                "85*150": { "1 раз в две недели": 420, "1 раз в неделю": 420, "2 раза в неделю": 420, "3 раза в неделю": 420 },
-                "115*200": { "1 раз в две недели": 760, "1 раз в неделю": 760, "2 раза в неделю": 760, "3 раза в неделю": 760 },
-                "150*240": { "1 раз в две недели": 1180, "1 раз в неделю": 1180, "2 раза в неделю": 1180, "3 раза в неделю": 1180 },
-                "150*300": { "1 раз в две недели": 1520, "1 раз в неделю": 1520, "2 раза в неделю": 1520, "3 раза в неделю": 1520 }
-            },
-            "Московская область": {
-                "85*60": { "1 раз в две недели": 280, "1 раз в неделю": 280, "2 раза в неделю": 280, "3 раза в неделю": 280 },
-                "85*150": { "1 раз в две недели": 620, "1 раз в неделю": 620, "2 раза в неделю": 620, "3 раза в неделю": 620 },
-                "115*200": { "1 раз в две недели": 1110, "1 раз в неделю": 1110, "2 раза в неделю": 1110, "3 раза в неделю": 1110 },
-                "150*240": { "1 раз в две недели": 1730, "1 раз в неделю": 1730, "2 раза в неделю": 1730, "3 раза в неделю": 1730 },
-                "150*300": { "1 раз в две недели": 2160, "1 раз в неделю": 2160, "2 раза в неделю": 2160, "3 раза в неделю": 2160 }
-            },
-            "Санкт-Петербург": {
-                "85*60": { "1 раз в две недели": 830, "1 раз в неделю": 490, "2 раза в неделю": 420, "3 раза в неделю": 340 },
-                "85*150": { "1 раз в две недели": 1000, "1 раз в неделю": 660, "2 раза в неделю": 590, "3 раза в неделю": 510 },
-                "115*200": { "1 раз в две недели": 1330, "1 раз в неделю": 890, "2 раза в неделю": 840, "3 раза в неделю": 680 },
-                "115*240": { "1 раз в две недели": 1500, "1 раз в неделю": 1000, "2 раза в неделю": 840, "3 раза в неделю": 760 },
-                "115*400": { "1 раз в две недели": 2510, "1 раз в неделю": 1670, "2 раза в неделю": 1520, "3 раза в неделю": 1350 },
-                "150*250": { "1 раз в две недели": 2000, "1 раз в неделю": 1330, "2 раза в неделю": 1180, "3 раза в неделю": 1010 },
-                "150*300": { "1 раз в две недели": 2510, "1 раз в неделю": 1670, "2 раза в неделю": 1520, "3 раза в неделю": 1350 }
-            },
-            "Ленинградская область": {
-                "85*60": { "1 раз в две недели": 830, "1 раз в неделю": 490, "2 раза в неделю": 420, "3 раза в неделю": 340 },
-                "85*150": { "1 раз в две недели": 1000, "1 раз в неделю": 660, "2 раза в неделю": 590, "3 раза в неделю": 510 },
-                "115*200": { "1 раз в две недели": 1330, "1 раз в неделю": 890, "2 раза в неделю": 840, "3 раза в неделю": 680 },
-                "115*240": { "1 раз в две недели": 1500, "1 раз в неделю": 1000, "2 раза в неделю": 840, "3 раза в неделю": 760 },
-                "115*400": { "1 раз в две недели": 2510, "1 раз в неделю": 1670, "2 раза в неделю": 1520, "3 раза в неделю": 1350 },
-                "150*250": { "1 раз в две недели": 2000, "1 раз в неделю": 1330, "2 раза в неделю": 1180, "3 раза в неделю": 1010 },
-                "150*300": { "1 раз в две недели": 2510, "1 раз в неделю": 1670, "2 раза в неделю": 1520, "3 раза в неделю": 1350 }
-            },
-            "Астрахань": {
-                "85*150": { "1 раз в две недели": 560, "1 раз в неделю": 560, "2 раза в неделю": 560, "3 раза в неделю": 560 },
-                "115*200": { "1 раз в две недели": 600, "1 раз в неделю": 600, "2 раза в неделю": 600, "3 раза в неделю": 600 },
-                "150*250": { "1 раз в две недели": 720, "1 раз в неделю": 720, "2 раза в неделю": 720, "3 раза в неделю": 720 }
-            },
-            "Астраханская область": {
-                "85*150": { "1 раз в две недели": 960, "1 раз в неделю": 960, "2 раза в неделю": 960, "3 раза в неделю": 960 },
-                "115*200": { "1 раз в две недели": 1120, "1 раз в неделю": 1120, "2 раза в неделю": 1120, "3 раза в неделю": 1120 },
-                "150*250": { "1 раз в две недели": 1280, "1 раз в неделю": 1280, "2 раза в неделю": 1280, "3 раза в неделю": 1280 }
-            },
-            "Уфа": {
-                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
-                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
-                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
-                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
-                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
-            },
-            "Республика Башкортостан": {
-                "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
-                "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
-                "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
-                "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
-                "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
-            },
-            "Новосибирск": {
-                "85*150": { "1 раз в две недели": 800, "1 раз в неделю": 560, "2 раза в неделю": 530, "3 раза в неделю": 500 },
-                "115*200": { "1 раз в две недели": 1080, "1 раз в неделю": 800, "2 раза в неделю": 740, "3 раза в неделю": 710 },
-                "115*400": { "1 раз в две недели": 2000, "1 раз в неделю": 1480, "2 раза в неделю": 1270, "3 раза в неделю": 1240 },
-                "150*250": { "1 раз в две недели": 1550, "1 раз в неделю": 1160, "2 раза в неделю": 1110, "3 раза в неделю": 1060 },
-                "150*300": { "1 раз в две недели": 1920, "1 раз в неделю": 1440, "2 раза в неделю": 1200, "3 раза в неделю": 1120 }
-            },
-            "Новосибирская область": {
-                "85*150": { "1 раз в две недели": 1200, "1 раз в неделю": 840, "2 раза в неделю": 800, "3 раза в неделю": 600 },
-                "115*200": { "1 раз в две недели": 1610, "1 раз в неделю": 1200, "2 раза в неделю": 1110, "3 раза в неделю": 1080 },
-                "115*400": { "1 раз в две недели": 3000, "1 раз в неделю": 2220, "2 раза в неделю": 1900, "3 раза в неделю": 1680 },
-                "150*250": { "1 раз в две недели": 2320, "1 раз в неделю": 1730, "2 раза в неделю": 1660, "3 раза в неделю": 1600 },
-                "150*300": { "1 раз в две недели": 2880, "1 раз в неделю": 2160, "2 раза в неделю": 1800, "3 раза в неделю": 1720 }
-            },
-            "Сургут": {
-                "85*150": { "1 раз в неделю": 720, "2 раза в неделю": 680, "3 раза в неделю": 640 },
-                "115*180": { "1 раз в неделю": 1160, "2 раза в неделю": 1100, "3 раза в неделю": 1040 },
-                "115*200": { "1 раз в неделю": 1290, "2 раза в неделю": 1220, "3 раза в неделю": 1160 },
-                "115*240": { "1 раз в неделю": 1540, "2 раза в неделю": 1470, "3 раза в неделю": 1390 },
-                "115*400": { "1 раз в неделю": 2570, "2 раза в неделю": 2430, "3 раза в неделю": 2310 },
-                "150*250": { "1 раз в неделю": 2100, "2 раза в неделю": 1990, "3 раза в неделю": 1890 },
-                "150*300": { "1 раз в неделю": 2680, "2 раза в неделю": 2550, "3 раза в неделю": 2410 }
-            },
-            "ХМАО": {
-                "85*150": { "1 раз в неделю": 720, "2 раза в неделю": 680, "3 раза в неделю": 640 },
-                "115*180": { "1 раз в неделю": 1160, "2 раза в неделю": 1100, "3 раза в неделю": 1040 },
-                "115*200": { "1 раз в неделю": 1290, "2 раза в неделю": 1220, "3 раза в неделю": 1160 },
-                "115*240": { "1 раз в неделю": 1540, "2 раза в неделю": 1470, "3 раза в неделю": 1390 },
-                "115*400": { "1 раз в неделю": 2570, "2 раза в неделю": 2430, "3 раза в неделю": 2310 },
-                "150*250": { "1 раз в неделю": 2100, "2 раза в неделю": 1990, "3 раза в неделю": 1890 },
-                "150*300": { "1 раз в неделю": 2680, "2 раза в неделю": 2550, "3 раза в неделю": 2410 }
-            },
-            "Тюмень": {
-                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
-                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
-                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
-                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
-                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
-            },
-            "Тюменская область": {
-                "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
-                "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
-                "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
-                "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
-                "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
-            },
-            "Екатеринбург": {
-                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
-                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
-                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
-                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
-                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
-            },
-            "Свердловская область": {
-                "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
-                "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
-                "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
-                "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
-                "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
-            },
-            "Челябинск": {
-                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
-                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
-                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
-                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
-                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
-            },
-            "Челябинская область": {
-                "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
-                "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
-                "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
-                "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
-                "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
-            },
-            "Пермь": {
-                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
-                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
-                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
-                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
-                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
-            },
-            "Пермский край": {
-                "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
-                "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
-                "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
-                "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
-                "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
-            },
-            "Казань": {
-                "85*60": { "1 раз в две недели": 410, "1 раз в неделю": 300, "2 раза в неделю": 270, "3 раза в неделю": 260 },
-                "85*150": { "1 раз в две недели": 610, "1 раз в неделю": 440, "2 раза в неделю": 420, "3 раза в неделю": 400 },
-                "115*180": { "1 раз в две недели": 990, "1 раз в неделю": 710, "2 раза в неделю": 680, "3 раза в неделю": 650 },
-                "115*300": { "1 раз в две недели": 1640, "1 раз в неделю": 1170, "2 раза в неделю": 1130, "3 раза в неделю": 1080 },
-                "150*240": { "1 раз в две недели": 1710, "1 раз в неделю": 1220, "2 раза в неделю": 1180, "3 раза в неделю": 1130 }
-            },
-           "Республика Татарстан": {
-            "85*60": { "1 раз в две недели": 440, "1 раз в неделю": 320, "2 раза в неделю": 300 },
-            "85*150": { "1 раз в две недели": 670, "1 раз в неделю": 480, "2 раза в неделю": 470 },
-            "115*180": { "1 раз в две недели": 1080, "1 раз в неделю": 780, "2 раза в неделю": 760 },
-            "115*300": { "1 раз в две недели": 1800, "1 раз в неделю": 1300, "2 раза в неделю": 1260 },
-            "150*240": { "1 раз в две недели": 1880, "1 раз в неделю": 1370, "2 раза в неделю": 1310 }
+<script>
+    // ПОЛНАЯ МОДЕЛЬ КАЛЬКУЛЯТОРА (исправленная)
+    const priceData = {
+        "Москва": {
+            "85*60": { "1 раз в две недели": 180, "1 раз в неделю": 180, "2 раза в неделю": 180, "3 раза в неделю": 180 },
+            "85*150": { "1 раз в две недели": 420, "1 раз в неделю": 420, "2 раза в неделю": 420, "3 раза в неделю": 420 },
+            "115*200": { "1 раз в две недели": 760, "1 раз в неделю": 760, "2 раза в неделю": 760, "3 раза в неделю": 760 },
+            "150*240": { "1 раз в две недели": 1180, "1 раз в неделю": 1180, "2 раза в неделю": 1180, "3 раза в неделю": 1180 },
+            "150*300": { "1 раз в две недели": 1520, "1 раз в неделю": 1520, "2 раза в неделю": 1520, "3 раза в неделю": 1520 }
+        },
+        "Московская область": {
+            "85*60": { "1 раз в две недели": 280, "1 раз в неделю": 280, "2 раза в неделю": 280, "3 раза в неделю": 280 },
+            "85*150": { "1 раз в две недели": 620, "1 раз в неделю": 620, "2 раза в неделю": 620, "3 раза в неделю": 620 },
+            "115*200": { "1 раз в две недели": 1110, "1 раз в неделю": 1110, "2 раза в неделю": 1110, "3 раза в неделю": 1110 },
+            "150*240": { "1 раз в две недели": 1730, "1 раз в неделю": 1730, "2 раза в неделю": 1730, "3 раза в неделю": 1730 },
+            "150*300": { "1 раз в две недели": 2160, "1 раз в неделю": 2160, "2 раза в неделю": 2160, "3 раза в неделю": 2160 }
+        },
+        "Санкт-Петербург": {
+            "85*60": { "1 раз в две недели": 830, "1 раз в неделю": 490, "2 раза в неделю": 420, "3 раза в неделю": 340 },
+            "85*150": { "1 раз в две недели": 1000, "1 раз в неделю": 660, "2 раза в неделю": 590, "3 раза в неделю": 510 },
+            "115*200": { "1 раз в две недели": 1330, "1 раз в неделю": 890, "2 раза в неделю": 840, "3 раза в неделю": 680 },
+            "115*240": { "1 раз в две недели": 1500, "1 раз в неделю": 1000, "2 раза в неделю": 840, "3 раза в неделю": 760 },
+            "115*400": { "1 раз в две недели": 2510, "1 раз в неделю": 1670, "2 раза в неделю": 1520, "3 раза в неделю": 1350 },
+            "150*250": { "1 раз в две недели": 2000, "1 раз в неделю": 1330, "2 раза в неделю": 1180, "3 раза в неделю": 1010 },
+            "150*300": { "1 раз в две недели": 2510, "1 раз в неделю": 1670, "2 раза в неделю": 1520, "3 раза в неделю": 1350 }
         }
     };
-<!-- НАЧАЛО СКРИПТОВ (ПРОДОЛЖЕНИЕ) -->
-<script>
-    // Функция для отправки формы контактов
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
+
+    // Основной калькулятор
+    let orderItems = [];
+    let currentItem = null;
+
+    // Тендерный калькулятор
+    let tenderItems = [];
+    const months = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+    let currentTenderItem = null;
+
+    // Инициализация при загрузке
+    document.addEventListener('DOMContentLoaded', function() {
+        initRegionSelects();
+        initMonthInputs();
+        setupEventListeners();
+    });
+
+    function initRegionSelects() {
+        const regionsOrder = [
+            "Москва", "Московская область", "Санкт-Петербург"
+        ];
+
+        document.querySelectorAll('select[id="region"], select[id="tenderRegion"]').forEach(select => {
+            select.innerHTML = '<option value="">Выберите регион</option>';
+            regionsOrder.forEach(region => {
+                if (priceData[region]) {
+                    const option = document.createElement('option');
+                    option.value = region;
+                    option.textContent = region;
+                    select.appendChild(option);
+                }
+            });
+        });
+    }
+
+    function initMonthInputs() {
+        const container = document.getElementById('monthInputs');
+        container.innerHTML = '';
         
-        const name = document.getElementById('contactName').value;
-        const phone = document.getElementById('contactPhone').value;
-        const message = document.getElementById('contactMessage').value;
-        const consent = document.getElementById('contactConsent').checked;
+        months.forEach(month => {
+            const monthDiv = document.createElement('div');
+            monthDiv.className = 'month-input';
+            monthDiv.innerHTML = `
+                <label>${month}</label>
+                <input type="number" min="0" placeholder="Ковры" class="month-carpets" data-month="${month}" onchange="calculateTender()">
+                <input type="number" min="0" placeholder="Замены" class="month-replacements" data-month="${month}" onchange="calculateTender()">
+                <div class="month-cost" data-month="${month}">0 ₽</div>
+            `;
+            container.appendChild(monthDiv);
+        });
+    }
+
+    function setupEventListeners() {
+        // Табы калькулятора
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.tab-btn').forEach(b => {
+                    b.style.backgroundColor = '#ddd';
+                    b.style.color = '#333';
+                });
+                this.style.backgroundColor = 'var(--accent-color)';
+                this.style.color = 'white';
+                
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById('standard-calculator').style.display = 'none';
+                document.getElementById('tender-calculator').style.display = 'none';
+                document.getElementById(tabId + '-calculator').style.display = 'block';
+            });
+        });
+
+        // Основной калькулятор
+        document.getElementById('region').addEventListener('change', updateSizes);
+        document.getElementById('size').addEventListener('change', updateFrequencies);
+        document.getElementById('frequency').addEventListener('change', calculate);
+        document.getElementById('quantity').addEventListener('change', calculate);
+    }
+
+    // Основные функции калькулятора
+    function updateSizes() {
+        const region = document.getElementById('region').value;
+        const sizeSelect = document.getElementById('size');
         
-        if (!name || !phone || !consent) {
-            alert('Пожалуйста, заполните все обязательные поля и дайте согласие на обработку данных');
+        sizeSelect.innerHTML = '<option value="">Выберите размер</option>';
+        sizeSelect.disabled = !region;
+        
+        if (region && priceData[region]) {
+            Object.keys(priceData[region]).forEach(size => {
+                const option = document.createElement('option');
+                option.value = size;
+                option.textContent = size;
+                sizeSelect.appendChild(option);
+            });
+        }
+        
+        currentItem = null;
+        calculate();
+    }
+
+    function updateFrequencies() {
+        const region = document.getElementById('region').value;
+        const size = document.getElementById('size').value;
+        const frequencySelect = document.getElementById('frequency');
+        
+        frequencySelect.innerHTML = '<option value="">Выберите периодичность</option>';
+        frequencySelect.disabled = !size;
+        
+        if (region && size && priceData[region] && priceData[region][size]) {
+            Object.keys(priceData[region][size]).forEach(freq => {
+                const option = document.createElement('option');
+                option.value = freq;
+                option.textContent = freq;
+                frequencySelect.appendChild(option);
+            });
+        }
+        
+        calculate();
+    }
+
+    function calculate() {
+        const region = document.getElementById('region').value;
+        const size = document.getElementById('size').value;
+        const frequency = document.getElementById('frequency').value;
+        const quantity = parseInt(document.getElementById('quantity').value) || 0;
+        
+        if (!region || !size || !frequency || quantity <= 0) {
+            currentItem = null;
+            updateOrderTable();
             return;
         }
         
-        let whatsappMessage = `Новая заявка с сайта:\nИмя: ${name}\nТелефон: ${phone}`;
-        if (message) whatsappMessage += `\nСообщение: ${message}`;
+        const pricePerItem = priceData[region][size][frequency];
+        let replacementsPerMonth = 2; // По умолчанию 1 раз в 2 недели
         
-        sendWhatsAppMessage(whatsappMessage);
+        if (frequency.includes('1 раз в неделю')) replacementsPerMonth = 4;
+        else if (frequency.includes('2 раза в неделю')) replacementsPerMonth = 8;
+        else if (frequency.includes('3 раза в неделю')) replacementsPerMonth = 12;
         
-        // Очистка формы после отправки
-        this.reset();
-        alert('Ваша заявка отправлена! Мы свяжемся с вами в ближайшее время.');
-    });
+        const costForMonth = pricePerItem * replacementsPerMonth * quantity;
+        
+        currentItem = {
+            region,
+            size,
+            frequency,
+            quantity,
+            pricePerItem,
+            costForMonth
+        };
+        
+        updateOrderTable();
+    }
 
-    // Инициализация табов калькулятора
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Удаляем активный класс у всех кнопок
-            tabBtns.forEach(b => {
-                b.style.backgroundColor = '#ddd';
-                b.style.color = '#333';
+    function addPosition() {
+        if (!currentItem) return;
+        
+        orderItems.push({...currentItem});
+        document.getElementById('addedNotice').style.display = 'block';
+        setTimeout(() => {
+            document.getElementById('addedNotice').style.display = 'none';
+        }, 3000);
+        
+        document.getElementById('size').value = '';
+        document.getElementById('frequency').innerHTML = '<option value="">Выберите периодичность</option>';
+        document.getElementById('frequency').disabled = true;
+        document.getElementById('quantity').value = '1';
+        
+        currentItem = null;
+        calculate();
+    }
+
+    function updateOrderTable() {
+        const tbody = document.getElementById('orderBody');
+        tbody.innerHTML = '';
+        let total = 0;
+        
+        if (currentItem) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${currentItem.size}</td>
+                <td>${currentItem.quantity}</td>
+                <td>${currentItem.frequency}</td>
+                <td>${currentItem.pricePerItem} ₽</td>
+                <td>${currentItem.costForMonth} ₽</td>
+            `;
+            tbody.appendChild(row);
+            total += currentItem.costForMonth;
+        }
+        
+        orderItems.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.size}</td>
+                <td>${item.quantity}</td>
+                <td>${item.frequency}</td>
+                <td>${item.pricePerItem} ₽</td>
+                <td>${item.costForMonth} ₽</td>
+            `;
+            tbody.appendChild(row);
+            total += item.costForMonth;
+        });
+        
+        document.getElementById('total').textContent = `Общая стоимость: ${total.toLocaleString('ru-RU')} ₽`;
+        document.getElementById('standard-result').style.display = 'block';
+    }
+
+    // Тендерный калькулятор
+    function updateTenderSizes() {
+        const region = document.getElementById('tenderRegion').value;
+        const sizeSelect = document.getElementById('tenderSize');
+        
+        sizeSelect.innerHTML = '<option value="">Выберите размер</option>';
+        sizeSelect.disabled = !region;
+        
+        if (region && priceData[region]) {
+            Object.keys(priceData[region]).forEach(size => {
+                const option = document.createElement('option');
+                option.value = size;
+                option.textContent = size;
+                sizeSelect.appendChild(option);
+            });
+        }
+        
+        currentTenderItem = null;
+        calculateTender();
+    }
+
+    function calculateTender() {
+        const region = document.getElementById('tenderRegion').value;
+        const size = document.getElementById('tenderSize').value;
+        
+        if (!region || !size) {
+            currentTenderItem = null;
+            updateTenderTable();
+            return;
+        }
+        
+        const prices = priceData[region][size];
+        const pricePerItem = prices[Object.keys(prices)[0]]; // Берем первую доступную частоту
+        
+        currentTenderItem = {
+            region,
+            size,
+            pricePerItem
+        };
+        
+        updateTenderTable();
+    }
+
+    function addTenderPosition() {
+        if (!currentTenderItem) return;
+        
+        tenderItems.push({...currentTenderItem});
+        document.getElementById('tenderSize').value = '';
+        document.getElementById('tenderSize').disabled = true;
+        
+        currentTenderItem = null;
+        calculateTender();
+    }
+
+    function updateTenderTable() {
+        const tbody = document.getElementById('tenderBody');
+        tbody.innerHTML = '';
+        let total = 0;
+        
+        if (currentTenderItem) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${currentTenderItem.size}</td>
+                <td>1</td>
+                <td>1 раз в две недели</td>
+                <td>${currentTenderItem.pricePerItem} ₽</td>
+            `;
+            tbody.appendChild(row);
+            total += currentTenderItem.pricePerItem * 2;
+        }
+        
+        tenderItems.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.size}</td>
+                <td>1</td>
+                <td>1 раз в две недели</td>
+                <td>${item.pricePerItem} ₽</td>
+            `;
+            tbody.appendChild(row);
+            total += item.pricePerItem * 2;
+        });
+        
+        months.forEach(month => {
+            const carpets = parseInt(document.querySelector(`.month-carpets[data-month="${month}"]`).value) || 0;
+            const replacements = parseInt(document.querySelector(`.month-replacements[data-month="${month}"]`).value) || 0;
+            let monthCost = 0;
+            
+            if (currentTenderItem) {
+                monthCost += carpets * replacements * currentTenderItem.pricePerItem;
+            }
+            
+            tenderItems.forEach(item => {
+                monthCost += carpets * replacements * item.pricePerItem;
             });
             
-            // Добавляем активный класс текущей кнопке
-            this.style.backgroundColor = 'var(--accent-color)';
-            this.style.color = 'white';
-            
-            // Переключаем видимость калькуляторов
-            const tabId = this.getAttribute('data-tab');
-            document.getElementById('standard-calculator').style.display = 'none';
-            document.getElementById('tender-calculator').style.display = 'none';
-            document.getElementById(tabId + '-calculator').style.display = 'block';
+            document.querySelector(`.month-cost[data-month="${month}"]`).textContent = `${monthCost.toLocaleString('ru-RU')} ₽`;
+            total += monthCost;
         });
-    });
+        
+        document.getElementById('tenderTotal').textContent = `Общая стоимость по контракту: ${total.toLocaleString('ru-RU')} ₽`;
+        document.getElementById('tender-result').style.display = 'block';
+    }
 
-    // Функция для плавного скролла к якорям
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+    // Вспомогательные функции
+    function sendToWhatsApp() {
+        let message = 'Запрос по калькулятору:\n\n';
+        
+        if (currentItem || orderItems.length > 0) {
+            message += 'Текущий заказ:\n';
+            if (currentItem) {
+                message += `- ${currentItem.size}, ${currentItem.quantity} шт., ${currentItem.frequency}: ${currentItem.costForMonth} ₽/мес\n`;
             }
-        });
-    });
+            orderItems.forEach(item => {
+                message += `- ${item.size}, ${item.quantity} шт., ${item.frequency}: ${item.costForMonth} ₽/мес\n`;
+            });
+            message += `\nОбщая стоимость: ${document.getElementById('total').textContent}`;
+        }
+        
+        sendWhatsAppMessage(message);
+    }
 
+    function sendWhatsAppMessage(message) {
+        const phone = '79770005127';
+        const encodedMessage = encodeURIComponent(message);
+        window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
+    }
+</script>
     // Анимация при прокрутке
     function animateOnScroll() {
         const elements = document.querySelectorAll('.service-card, .advantage-card, .testimonial-card');
@@ -1542,22 +1674,6 @@
             this.style.display = "none";
         }
     });
-// НАЧАЛО ИСПРАВЛЕНИЯ КАЛЬКУЛЯТОРА
-document.addEventListener('DOMContentLoaded', function() {
-    initRegionSelects(); // Инициализация регионов
-    initMonthInputs();   // Инициализация месяцев для тендера
-    
-    // Вешаем обработчики на табы калькулятора
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const tabId = this.getAttribute('data-tab');
-            document.getElementById('standard-calculator').style.display = 'none';
-            document.getElementById('tender-calculator').style.display = 'none';
-            document.getElementById(tabId + '-calculator').style.display = 'block';
-        });
-    });
-});
-// КОНЕЦ ИСПРАВЛЕНИЯ
 </script>
 
 <!-- YANDEX METRICA -->
