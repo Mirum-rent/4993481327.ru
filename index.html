@@ -503,6 +503,64 @@
                 font-size: 1.5rem;
             }
         }
+/* Стили для переключателей согласия */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--secondary-color);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+.toggle-label {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.privacy-link {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    margin-left: 5px;
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
@@ -1769,16 +1827,6 @@
         });
     }
 
-    // Запуск анимации при загрузке и прокрутке
-    window.addEventListener('load', animateOnScroll);
-    window.addEventListener('scroll', animateOnScroll);
-
-    // Инициализация всех элементов с анимацией
-    document.querySelectorAll('.service-card, .advantage-card, .testimonial-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
 </script>
 <!-- КОНЕЦ СКРИПТОВ -->
 
