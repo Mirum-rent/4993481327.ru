@@ -561,6 +561,43 @@ input:checked + .toggle-slider:before {
     margin-left: 5px;
     cursor: pointer;
 }
+/* Стили для модального окна политики конфиденциальности */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: var(--accent-color);
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: var(--secondary-color);
+}
     </style>
 </head>
 <body>
@@ -1842,7 +1879,54 @@ input:checked + .toggle-slider:before {
             this.style.display = "none";
         }
     });
+// Функции для модального окна политики конфиденциальности
+function openPrivacyModal() {
+    document.getElementById('privacyModal').style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Запрещаем прокрутку страницы
+}
+
+function closePrivacyModal() {
+    document.getElementById('privacyModal').style.display = 'none';
+    document.body.style.overflow = 'auto'; // Возвращаем прокрутку страницы
+}
+
+// Закрытие модального окна при клике вне его области
+window.onclick = function(event) {
+    const modal = document.getElementById('privacyModal');
+    if (event.target == modal) {
+        closePrivacyModal();
+    }
+}
 </script>
+
+<!-- Модальное окно политики конфиденциальности -->
+<div id="privacyModal" class="modal" style="display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); overflow: auto;">
+    <div class="modal-content" style="background-color: white; margin: 5% auto; padding: 30px; border-radius: 8px; max-width: 800px; width: 90%; position: relative;">
+        <span class="close-modal" onclick="closePrivacyModal()" style="position: absolute; top: 15px; right: 25px; color: var(--accent-color); font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+        <h2 style="color: var(--accent-color); margin-bottom: 20px;">Политика конфиденциальности</h2>
+        <div style="max-height: 70vh; overflow-y: auto;">
+            <!-- Здесь содержимое вашей политики конфиденциальности -->
+            <h3>1. Общие положения</h3>
+            <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006 №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые компанией «Чистый пол».</p>
+            
+            <h3>2. Основные понятия</h3>
+            <p>Оператор - государственный орган, муниципальный орган, юридическое или физическое лицо, самостоятельно или совместно с другими лицами организующие и (или) осуществляющие обработку персональных данных.</p>
+            
+            <h3>3. Обрабатываемые данные</h3>
+            <p>Мы можем собирать следующую информацию: имя, контактный телефон, адрес электронной почты, реквизиты организации.</p>
+            
+            <h3>4. Цели обработки</h3>
+            <p>Ваши персональные данные используются для связи с вами, оформления договоров, оказания услуг и информирования о наших акциях и предложениях.</p>
+            
+            <h3>5. Сроки хранения</h3>
+            <p>Персональные данные хранятся до достижения целей обработки или до истечения сроков хранения, установленных законодательством.</p>
+            
+            <h3>6. Ваши права</h3>
+            <p>Вы имеете право на доступ, исправление, удаление ваших персональных данных, а также право отозвать согласие на обработку.</p>
+        </div>
+        <button onclick="closePrivacyModal()" class="btn" style="margin-top: 20px; background-color: var(--accent-color);">Закрыть</button>
+    </div>
+</div>
 
 <!-- YANDEX METRICA -->
 <script type="text/javascript" >
