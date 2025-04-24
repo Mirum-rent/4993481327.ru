@@ -1812,22 +1812,7 @@ input:checked + .toggle-slider:before {
         window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
     }
 </script>
-    // Анимация при прокрутке
-    function animateOnScroll() {
-        const elements = document.querySelectorAll('.service-card, .advantage-card, .testimonial-card');
-        
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-            
-            if (elementPosition < screenPosition) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    }
-
-</script>
+  
 <!-- КОНЕЦ СКРИПТОВ -->
 
 <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ФОТОГРАФИЙ -->
