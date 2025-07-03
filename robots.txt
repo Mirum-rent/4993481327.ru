@@ -1,18 +1,15 @@
 User-agent: *
-Allow: /
-Disallow: /private/
-Disallow: /tmp/
+Disallow: /
 
-Sitemap: https://4993481327.ru/sitemap.xml
-
-# Оптимизация для Яндекс и Google
-Host: https://4993481327.ru
-Clean-param: ref /
-Crawl-delay: 2
-
-# Особые правила для ChatGPT и других ботов
+# Блокировка AI-ботов
 User-agent: ChatGPT-User
 Disallow: /
 
 User-agent: GPTBot
 Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Отключение sitemap для зеркала
+# Sitemap: https://arenda-kovrov-mirum.ru/sitemap.xml
